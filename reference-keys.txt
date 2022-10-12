@@ -12,3 +12,7 @@ interaktivna-konzola
 pisanje-r-skripti
 r-markdown
 kako-koristiti-ovaj-udžbenik
+tipovi
+osnovni-tipovi-podataka
+operatori
+nedostajuće-nepoznate-i-nemoguće-vrijednosti
