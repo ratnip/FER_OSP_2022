@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2022-10-18" />
+<meta name="date" content="2022-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="vektori.html"/>
-
+<link rel="next" href="kontrola.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -244,8 +244,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="okviri.html"><a href="okviri.html#podatkovni-okviri"><i class="fa fa-check"></i><b>4.1</b> Podatkovni okviri</a></li>
 <li class="chapter" data-level="4.2" data-path="okviri.html"><a href="okviri.html#odabir-redaka-i-stupaca-podatkovnih-okvira"><i class="fa fa-check"></i><b>4.2</b> Odabir redaka i stupaca podatkovnih okvira</a></li>
 <li class="chapter" data-level="4.3" data-path="okviri.html"><a href="okviri.html#dodavanje-i-brisanje-redaka-i-stupaca"><i class="fa fa-check"></i><b>4.3</b> Dodavanje i brisanje redaka i stupaca</a></li>
-<li class="chapter" data-level="4.4" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.4</b> Faktori</a></li>
+<li class="chapter" data-level="4.4" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.4</b> Faktori</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="okviri.html"><a href="okviri.html#primjer-4.1---problem-automatske-kategorizacije"><i class="fa fa-check"></i><b>4.4.1</b> Primjer 4.1 - problem automatske kategorizacije</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="okviri.html"><a href="okviri.html#zadaci-za-vježbu-2"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="kontrola.html"><a href="kontrola.html"><i class="fa fa-check"></i><b>5</b> Kontrola toka i objekti</a><ul>
+<li class="chapter" data-level="5.1" data-path="kontrola.html"><a href="kontrola.html#naredbe-kontrole-toka"><i class="fa fa-check"></i><b>5.1</b> Naredbe kontrole toka</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="kontrola.html"><a href="kontrola.html#uvjetno-izvođenje-naredbi"><i class="fa fa-check"></i><b>5.1.1</b> Uvjetno izvođenje naredbi</a></li>
+<li class="chapter" data-level="5.1.2" data-path="kontrola.html"><a href="kontrola.html#programske-petlje"><i class="fa fa-check"></i><b>5.1.2</b> Programske petlje</a></li>
+<li class="chapter" data-level="5.1.3" data-path="kontrola.html"><a href="kontrola.html#petlja-repeat"><i class="fa fa-check"></i><b>5.1.3</b> Petlja <code>repeat</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="kontrola.html"><a href="kontrola.html#petlja-while"><i class="fa fa-check"></i><b>5.1.4</b> Petlja <code>while</code></a></li>
+<li class="chapter" data-level="5.1.5" data-path="kontrola.html"><a href="kontrola.html#petlja-for"><i class="fa fa-check"></i><b>5.1.5</b> Petlja <code>for</code></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kontrola.html"><a href="kontrola.html#zadaci-za-vježbu-3"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="paketi.html"><a href="paketi.html"><i class="fa fa-check"></i><b>6</b> Paketi, ugrađene funkcije i okoline</a><ul>
+<li class="chapter" data-level="6.1" data-path="paketi.html"><a href="paketi.html#rad-s-paketima"><i class="fa fa-check"></i><b>6.1</b> Rad s paketima</a></li>
+<li class="chapter" data-level="6.2" data-path="paketi.html"><a href="paketi.html#ugrađene-funkcije"><i class="fa fa-check"></i><b>6.2</b> Ugrađene funkcije</a></li>
+<li class="chapter" data-level="6.3" data-path="paketi.html"><a href="paketi.html#okoline"><i class="fa fa-check"></i><b>6.3</b> Okoline</a></li>
+<li class="chapter" data-level="" data-path="paketi.html"><a href="paketi.html#zadaci-za-vježbu-4"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 </ul>
 
@@ -875,50 +893,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  [1] 2 4 4 3 3 2 4 2 3 3</code></pre>
 </div>
 <hr />
-<p>Pretvaranjem faktora u znakovni tip zapravo radimo operaciju inverznu faktoriziranju, tj. dobijamo originalni znakovni vektor. S druge strane pretvaranjem faktora u numerički tip zapravo dobivamo “prekodirane” brojke koje faktor interno koristi za reprezentaciju kategorija. Možemo se zapitati - zašto bi nam ovo bilo korisno? Odgovor je - ne, od ovog u praksi nema neke direktne koristi. Zapravo je ovo nešto što nam može stvoriti vrlo velike probleme ako to unaprijed ne očekujemo.</p>
-<p>Ovdje se krije već prije navedena “kontroverza” oko faktora kao tipa podataka, koja je rezultat nazivnog ponašanja jezika R, a koje je (konačno) izmijenjeno tak sa inačicom 4.0. Naime, u dotadašnjim inačicama parametar <code>stringsAsFactors</code> je bio nazivno podešen na <code>TRUE</code>, što znači da su se svi znakovni stupci automatski kategorizirali osim u slučaju kada je korisnik eksplicitno izrazio da ne želi ovu postavku. Ovo je često uzrokovalo znatne probleme, koji su bili time veći zbog činjenica da je ponekad bilo teško uočiti da je do problema uopće nastalo te što bi mogao biti potencijalni uzrok.</p>
-<p>Pogledajmo u sljedećem zadatku što je potencijalni problem automatske kategorizacije.</p>
-<p><strong>Zadatak 4.13 - Problem automatske kategorizacije</strong></p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="okviri.html#cb168-1"></a><span class="co"># simulacija &quot;automatske kategorizacije&quot; numeričkog stupca</span></span>
-<span id="cb168-2"><a href="okviri.html#cb168-2"></a><span class="co"># unutar kojeg se potkrala jedna znakovna vrijednost</span></span>
-<span id="cb168-3"><a href="okviri.html#cb168-3"></a>ispit &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">idStud =</span> <span class="dv">1000</span><span class="op">:</span><span class="dv">1006</span>, <span class="dt">ocjena =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="st">&quot;NULL&quot;</span>, <span class="dv">3</span>, <span class="dv">3</span>)))</span>
+<p>Pretvaranjem faktora u znakovni tip zapravo radimo operaciju inverzne faktorizacije, tj. možemo se vratiti na izvorni znakovni vektor. S druge strane, pretvaranjem faktora u numerički tip, dobit ćemo popis kodiranih brojeva kojima se interni faktor koristi za predstavljanje svake kategorije.</p>
+<p>Sada se može postaviti jedno pitanje - ima li ikakve koristi od pretvaranja faktora u njegovu znakovnu ili numeričku kopiju?</p>
+<p>Općeniti odgovor bio bi - “ne”. Varijable faktora automatski će se ponašati kao znakovi gdje god je to potrebno (na primjer ako želimo filtrirati sva imena s tri slova). S druge strane, interni numerički prikaz je besmislen bez dodatne informacije kojoj kategoriji dani broj zapravo pripada. Međutim, saznanje što se događa kada pretvaramo faktor u znakovni ili numerički vektor može nam pomoći da izbjegnemo posebno nezgodnu pogrešku do koje može doći ako analitičar pogrešno rukuje faktorskim varijablama. Dobra je vijest da je izlaskom inačice R 4.0 mogućnost ove pogreške znatno smanjena, ali još uvijek vrijedi znati što ona podrazumijeva i kako je izbjeći.</p>
+<p>Pogreška o kojoj je riječ događa se kada je numerički stupac pogrešno identificiran kao kategorički stupac, što je prije inačice R 4.0 bila relativno česta pojava kada je analitičar dopustio R-u da automatski zaključi vrste stupaca koji se učitavaju iz vanjskog izvora podataka. Obzirom da je nazivna vrijednost parametra <code>stringsAsFactors</code> bila <code>TRUE</code>, ukoliko se ovaj parametar nije naveo R-ov algoritam prepoznavanja tipa stupaca bi prvo razdvojio radi li se o numeričkim ili znakovnim stupcima, a potom bi se znakovni stupci automatski faktorizirali.</p>
+<p>Zašto bi ovo predstavljalo problem? Pogledajmo sljedeći primjer, gdje imamo ručno unesene “tablične” podatke gdje jedan unos ima pogrešku ( <code>7.07</code> je greškom umetnut kao <code>7.O7</code>). Simulirajmo što se moglo dogoditi u starijim verzijama R-a.</p>
+<div id="primjer-4.1---problem-automatske-kategorizacije" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.4.1</span> Primjer 4.1 - problem automatske kategorizacije<a href="okviri.html#primjer-4.1---problem-automatske-kategorizacije" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="okviri.html#cb168-1"></a><span class="co"># simulirana &quot;pogreška ručnog unosa&quot;</span></span>
+<span id="cb168-2"><a href="okviri.html#cb168-2"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">measures =</span> <span class="kw">c</span>(<span class="st">&quot;1.45&quot;</span>, <span class="st">&quot;5.77&quot;</span>, <span class="st">&quot;1.12&quot;</span>, <span class="st">&quot;7.O7&quot;</span>, <span class="st">&quot;3.23&quot;</span>),</span>
+<span id="cb168-3"><a href="okviri.html#cb168-3"></a>                 <span class="dt">stringsAsFactors =</span> <span class="ot">TRUE</span>) <span class="co"># imitiramo ponašanje starijih inačica R-a</span></span>
 <span id="cb168-4"><a href="okviri.html#cb168-4"></a></span>
-<span id="cb168-5"><a href="okviri.html#cb168-5"></a></span>
-<span id="cb168-6"><a href="okviri.html#cb168-6"></a><span class="co"># ispisite podatkovni okvir `ispit`</span></span>
-<span id="cb168-7"><a href="okviri.html#cb168-7"></a></span>
-<span id="cb168-8"><a href="okviri.html#cb168-8"></a><span class="co"># pretvorite stupac `ocjena` u numericki</span></span>
-<span id="cb168-9"><a href="okviri.html#cb168-9"></a></span>
-<span id="cb168-10"><a href="okviri.html#cb168-10"></a><span class="co"># ponovo ispisite podatkovni okvir `ispit`</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="okviri.html#cb169-1"></a><span class="co"># ispisite podatkovni okvir `ispit`</span></span>
-<span id="cb169-2"><a href="okviri.html#cb169-2"></a>ispit</span>
-<span id="cb169-3"><a href="okviri.html#cb169-3"></a></span>
-<span id="cb169-4"><a href="okviri.html#cb169-4"></a><span class="co"># pretvorite stupac `ocjena` u numericki</span></span>
-<span id="cb169-5"><a href="okviri.html#cb169-5"></a>ispit<span class="op">$</span>ocjena &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(ispit<span class="op">$</span>ocjena)</span>
-<span id="cb169-6"><a href="okviri.html#cb169-6"></a></span>
-<span id="cb169-7"><a href="okviri.html#cb169-7"></a><span class="kw">cat</span>(<span class="st">&quot;-----------</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
-<span id="cb169-8"><a href="okviri.html#cb169-8"></a></span>
-<span id="cb169-9"><a href="okviri.html#cb169-9"></a><span class="co"># ponovo ispisite podatkovni okvir `ispit`</span></span>
-<span id="cb169-10"><a href="okviri.html#cb169-10"></a>ispit</span></code></pre></div>
-<pre><code>##   idStud ocjena
-## 1   1000      4
-## 2   1001      2
-## 3   1002      1
-## 4   1003      5
-## 5   1004   NULL
-## 6   1005      3
-## 7   1006      3
-## -----------
-##   idStud ocjena
-## 1   1000      4
-## 2   1001      2
-## 3   1002      1
-## 4   1003      5
-## 5   1004      6
-## 6   1005      3
-## 7   1006      3</code></pre>
-</div>
+<span id="cb168-5"><a href="okviri.html#cb168-5"></a><span class="co"># analitičar računa prosjek mjera, uočava neobično ponašanje</span></span>
+<span id="cb168-6"><a href="okviri.html#cb168-6"></a><span class="kw">mean</span>(df<span class="op">$</span>measures)</span></code></pre></div>
+<pre><code>## Warning in mean.default(df$measures): argument is not numeric or logical:
+## returning NA</code></pre>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="okviri.html#cb170-1"></a><span class="co"># sumnjajući na problem s tipom podatka, analitičar radi</span></span>
+<span id="cb170-2"><a href="okviri.html#cb170-2"></a><span class="co"># eksplicitnu konverziju stupca u numerički</span></span>
+<span id="cb170-3"><a href="okviri.html#cb170-3"></a>df<span class="op">$</span>measures &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(df<span class="op">$</span>measures)</span>
+<span id="cb170-4"><a href="okviri.html#cb170-4"></a></span>
+<span id="cb170-5"><a href="okviri.html#cb170-5"></a><span class="co"># mjere se zamjenjuju numeričkim identifikatorima &quot;kategorija&quot;</span></span>
+<span id="cb170-6"><a href="okviri.html#cb170-6"></a><span class="co"># stvarni iznosi mjera se nepovratno gube</span></span>
+<span id="cb170-7"><a href="okviri.html#cb170-7"></a><span class="co"># daljnji numerički izračuni sa ovim stupcem neće rezultirati greškom</span></span>
+<span id="cb170-8"><a href="okviri.html#cb170-8"></a><span class="co"># ali će biti besmisleni</span></span>
+<span id="cb170-9"><a href="okviri.html#cb170-9"></a>df</span></code></pre></div>
+<pre><code>## [1] NA
+##   id measures
+## 1  1        2
+## 2  2        4
+## 3  3        1
+## 4  4        5
+## 5  5        3</code></pre>
 <hr />
+</div>
 </div>
 <div id="zadaci-za-vježbu-2" class="section level2 unnumbered hasAnchor">
 <h2>Zadaci za vježbu<a href="okviri.html#zadaci-za-vježbu-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -958,8 +965,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="vektori.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="vektori.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kontrola.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
