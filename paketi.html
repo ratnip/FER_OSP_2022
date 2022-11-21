@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2022-11-10" />
+<meta name="date" content="2022-11-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -49,7 +49,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -122,18 +121,18 @@ pre.plot {
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -153,13 +152,13 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -172,7 +171,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -186,6 +185,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -200,57 +221,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>(Udžbenik za predmet “Osnove statističkog programiranja”)</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>(Udžbenik za predmet “Osnove statističkog programiranja”)</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#predgovor"><i class="fa fa-check"></i>Predgovor</a></li>
 </ul></li>
 <li class="part"><span><b>I Osnovni elementi jezika R</b></span></li>
-<li class="chapter" data-level="1" data-path="uvod.html"><a href="uvod.html"><i class="fa fa-check"></i><b>1</b> Uvod</a><ul>
-<li class="chapter" data-level="1.1" data-path="uvod.html"><a href="uvod.html#što-je-programski-jezik-r"><i class="fa fa-check"></i><b>1.1</b> Što je programski jezik R?</a><ul>
+<li class="chapter" data-level="1" data-path="uvod.html"><a href="uvod.html"><i class="fa fa-check"></i><b>1</b> Uvod</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="uvod.html"><a href="uvod.html#što-je-programski-jezik-r"><i class="fa fa-check"></i><b>1.1</b> Što je programski jezik R?</a>
+<ul>
 <li class="chapter" data-level="1.1.1" data-path="uvod.html"><a href="uvod.html#općenito-o-r-u"><i class="fa fa-check"></i><b>1.1.1</b> Općenito o R-u</a></li>
 <li class="chapter" data-level="1.1.2" data-path="uvod.html"><a href="uvod.html#alternative-jeziku-r"><i class="fa fa-check"></i><b>1.1.2</b> Alternative jeziku R</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="uvod.html"><a href="uvod.html#instalacija-programske-podrške"><i class="fa fa-check"></i><b>1.2</b> Instalacija programske podrške</a></li>
-<li class="chapter" data-level="1.3" data-path="uvod.html"><a href="uvod.html#pregled-razvojnog-sučelja-rstudio"><i class="fa fa-check"></i><b>1.3</b> Pregled razvojnog sučelja <em>RStudio</em></a><ul>
+<li class="chapter" data-level="1.3" data-path="uvod.html"><a href="uvod.html#pregled-razvojnog-sučelja-rstudio"><i class="fa fa-check"></i><b>1.3</b> Pregled razvojnog sučelja <em>RStudio</em></a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="uvod.html"><a href="uvod.html#interaktivna-konzola"><i class="fa fa-check"></i><b>1.3.1</b> Interaktivna konzola</a></li>
 <li class="chapter" data-level="1.3.2" data-path="uvod.html"><a href="uvod.html#pisanje-r-skripti"><i class="fa fa-check"></i><b>1.3.2</b> Pisanje R skripti</a></li>
 <li class="chapter" data-level="1.3.3" data-path="uvod.html"><a href="uvod.html#r-markdown"><i class="fa fa-check"></i><b>1.3.3</b> <em>R Markdown</em></a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="uvod.html"><a href="uvod.html#kako-koristiti-ovaj-udžbenik"><i class="fa fa-check"></i><b>1.4</b> Kako koristiti ovaj udžbenik?</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="tipovi.html"><a href="tipovi.html"><i class="fa fa-check"></i><b>2</b> Osnovni tipovi podataka i operatori</a><ul>
+<li class="chapter" data-level="2" data-path="tipovi.html"><a href="tipovi.html"><i class="fa fa-check"></i><b>2</b> Osnovni tipovi podataka i operatori</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="tipovi.html"><a href="tipovi.html#osnovni-tipovi-podataka"><i class="fa fa-check"></i><b>2.1</b> Osnovni tipovi podataka</a></li>
 <li class="chapter" data-level="2.2" data-path="tipovi.html"><a href="tipovi.html#operatori"><i class="fa fa-check"></i><b>2.2</b> Operatori</a></li>
 <li class="chapter" data-level="2.3" data-path="tipovi.html"><a href="tipovi.html#nedostajuće-nepoznate-i-nemoguće-vrijednosti"><i class="fa fa-check"></i><b>2.3</b> Nedostajuće, nepoznate i nemoguće vrijednosti</a></li>
 <li class="chapter" data-level="" data-path="tipovi.html"><a href="tipovi.html#zadaci-za-vježbu"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="vektori.html"><a href="vektori.html"><i class="fa fa-check"></i><b>3</b> Vektori, matrice i liste</a><ul>
-<li class="chapter" data-level="3.1" data-path="vektori.html"><a href="vektori.html#vektori-1"><i class="fa fa-check"></i><b>3.1</b> Vektori</a><ul>
+<li class="chapter" data-level="3" data-path="vektori.html"><a href="vektori.html"><i class="fa fa-check"></i><b>3</b> Vektori, matrice i liste</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="vektori.html"><a href="vektori.html#vektori-1"><i class="fa fa-check"></i><b>3.1</b> Vektori</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="vektori.html"><a href="vektori.html#stvaranje-vektora"><i class="fa fa-check"></i><b>3.1.1</b> Stvaranje vektora</a></li>
 <li class="chapter" data-level="3.1.2" data-path="vektori.html"><a href="vektori.html#operator"><i class="fa fa-check"></i><b>3.1.2</b> Operator <code>[</code></a></li>
 <li class="chapter" data-level="3.1.3" data-path="vektori.html"><a href="vektori.html#principi-vektorizacije-i-recikliranja"><i class="fa fa-check"></i><b>3.1.3</b> Principi vektorizacije i recikliranja</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="vektori.html"><a href="vektori.html#indeksni-vektori"><i class="fa fa-check"></i><b>3.2</b> Indeksni vektori</a><ul>
+<li class="chapter" data-level="3.2" data-path="vektori.html"><a href="vektori.html#indeksni-vektori"><i class="fa fa-check"></i><b>3.2</b> Indeksni vektori</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="vektori.html"><a href="vektori.html#lokacijsko-referenciranje"><i class="fa fa-check"></i><b>3.2.1</b> Lokacijsko referenciranje</a></li>
 <li class="chapter" data-level="3.2.2" data-path="vektori.html"><a href="vektori.html#uvjetno-referenciranje"><i class="fa fa-check"></i><b>3.2.2</b> Uvjetno referenciranje</a></li>
 <li class="chapter" data-level="3.2.3" data-path="vektori.html"><a href="vektori.html#imensko-referenciranje"><i class="fa fa-check"></i><b>3.2.3</b> Imensko referenciranje</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="vektori.html"><a href="vektori.html#matrice-i-polja"><i class="fa fa-check"></i><b>3.3</b> Matrice i polja</a><ul>
+<li class="chapter" data-level="3.3" data-path="vektori.html"><a href="vektori.html#matrice-i-polja"><i class="fa fa-check"></i><b>3.3</b> Matrice i polja</a>
+<ul>
 <li class="chapter" data-level="3.3.1" data-path="vektori.html"><a href="vektori.html#rezanje-matrica"><i class="fa fa-check"></i><b>3.3.1</b> Rezanje matrica</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="vektori.html"><a href="vektori.html#liste"><i class="fa fa-check"></i><b>3.4</b> Liste</a></li>
 <li class="chapter" data-level="" data-path="vektori.html"><a href="vektori.html#zadaci-za-vježbu-1"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="okviri.html"><a href="okviri.html"><i class="fa fa-check"></i><b>4</b> Podatkovni okviri i faktori</a><ul>
+<li class="chapter" data-level="4" data-path="okviri.html"><a href="okviri.html"><i class="fa fa-check"></i><b>4</b> Podatkovni okviri i faktori</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="okviri.html"><a href="okviri.html#podatkovni-okviri"><i class="fa fa-check"></i><b>4.1</b> Podatkovni okviri</a></li>
 <li class="chapter" data-level="4.2" data-path="okviri.html"><a href="okviri.html#odabir-redaka-i-stupaca-podatkovnih-okvira"><i class="fa fa-check"></i><b>4.2</b> Odabir redaka i stupaca podatkovnih okvira</a></li>
 <li class="chapter" data-level="4.3" data-path="okviri.html"><a href="okviri.html#dodavanje-i-brisanje-redaka-i-stupaca"><i class="fa fa-check"></i><b>4.3</b> Dodavanje i brisanje redaka i stupaca</a></li>
-<li class="chapter" data-level="4.4" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.4</b> Faktori</a><ul>
+<li class="chapter" data-level="4.4" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.4</b> Faktori</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="okviri.html"><a href="okviri.html#primjer-4.1---problem-automatske-kategorizacije"><i class="fa fa-check"></i><b>4.4.1</b> Primjer 4.1 - problem automatske kategorizacije</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="okviri.html"><a href="okviri.html#zadaci-za-vježbu-2"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="kontrola.html"><a href="kontrola.html"><i class="fa fa-check"></i><b>5</b> Kontrola toka i objekti</a><ul>
-<li class="chapter" data-level="5.1" data-path="kontrola.html"><a href="kontrola.html#naredbe-kontrole-toka"><i class="fa fa-check"></i><b>5.1</b> Naredbe kontrole toka</a><ul>
+<li class="chapter" data-level="5" data-path="kontrola.html"><a href="kontrola.html"><i class="fa fa-check"></i><b>5</b> Kontrola toka i objekti</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="kontrola.html"><a href="kontrola.html#naredbe-kontrole-toka"><i class="fa fa-check"></i><b>5.1</b> Naredbe kontrole toka</a>
+<ul>
 <li class="chapter" data-level="5.1.1" data-path="kontrola.html"><a href="kontrola.html#uvjetno-izvođenje-naredbi"><i class="fa fa-check"></i><b>5.1.1</b> Uvjetno izvođenje naredbi</a></li>
 <li class="chapter" data-level="5.1.2" data-path="kontrola.html"><a href="kontrola.html#programske-petlje"><i class="fa fa-check"></i><b>5.1.2</b> Programske petlje</a></li>
 <li class="chapter" data-level="5.1.3" data-path="kontrola.html"><a href="kontrola.html#petlja-repeat"><i class="fa fa-check"></i><b>5.1.3</b> Petlja <code>repeat</code></a></li>
@@ -259,14 +293,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="kontrola.html"><a href="kontrola.html#zadaci-za-vježbu-3"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="paketi.html"><a href="paketi.html"><i class="fa fa-check"></i><b>6</b> Paketi, ugrađene funkcije i okoline</a><ul>
+<li class="chapter" data-level="6" data-path="paketi.html"><a href="paketi.html"><i class="fa fa-check"></i><b>6</b> Paketi, ugrađene funkcije i okoline</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="paketi.html"><a href="paketi.html#rad-s-paketima"><i class="fa fa-check"></i><b>6.1</b> Rad s paketima</a></li>
 <li class="chapter" data-level="6.2" data-path="paketi.html"><a href="paketi.html#ugrađene-funkcije"><i class="fa fa-check"></i><b>6.2</b> Ugrađene funkcije</a></li>
 <li class="chapter" data-level="6.3" data-path="paketi.html"><a href="paketi.html#okoline"><i class="fa fa-check"></i><b>6.3</b> Okoline</a></li>
 <li class="chapter" data-level="" data-path="paketi.html"><a href="paketi.html#zadaci-za-vježbu-4"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="korisnik.html"><a href="korisnik.html"><i class="fa fa-check"></i><b>7</b> Korisnički definirane funkcije</a><ul>
-<li class="chapter" data-level="7.1" data-path="korisnik.html"><a href="korisnik.html#kako-definirati-funkciju"><i class="fa fa-check"></i><b>7.1</b> Kako definirati funkciju</a><ul>
+<li class="chapter" data-level="7" data-path="korisnik.html"><a href="korisnik.html"><i class="fa fa-check"></i><b>7</b> Korisnički definirane funkcije</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="korisnik.html"><a href="korisnik.html#kako-definirati-funkciju"><i class="fa fa-check"></i><b>7.1</b> Kako definirati funkciju</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="korisnik.html"><a href="korisnik.html#princip-kopiranja-kod-izmjene-copy-on-modify"><i class="fa fa-check"></i><b>7.1.1</b> Princip “kopiranja kod izmjene” (copy-on-modify)</a></li>
 <li class="chapter" data-level="7.1.2" data-path="korisnik.html"><a href="korisnik.html#funkcija-kao-objekt"><i class="fa fa-check"></i><b>7.1.2</b> Funkcija kao objekt</a></li>
 </ul></li>
@@ -275,6 +312,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="korisnik.html"><a href="korisnik.html#funkcije-lapply-sapply-i-vapply"><i class="fa fa-check"></i><b>7.4</b> Funkcije <code>lapply</code>, <code>sapply</code> i <code>vapply</code></a></li>
 <li class="chapter" data-level="7.5" data-path="korisnik.html"><a href="korisnik.html#ostale-funkcije-iz-porodice-apply-i-dostupne-alternative"><i class="fa fa-check"></i><b>7.5</b> Ostale funkcije iz porodice <code>apply</code> i dostupne alternative</a></li>
 <li class="chapter" data-level="" data-path="korisnik.html"><a href="korisnik.html#zadaci-za-vježbu-5"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="objekti.html"><a href="objekti.html"><i class="fa fa-check"></i><b>8</b> Objektni modeli</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="objekti.html"><a href="objekti.html#objektni-modeli-u-jeziku-r"><i class="fa fa-check"></i><b>8.1</b> Objektni modeli u jeziku R</a></li>
+<li class="chapter" data-level="8.2" data-path="objekti.html"><a href="objekti.html#četiri-tipa-objekata-u-r-u"><i class="fa fa-check"></i><b>8.2</b> Četiri tipa objekata u R-u</a></li>
+<li class="chapter" data-level="8.3" data-path="objekti.html"><a href="objekti.html#pomoćni-paket-sloop"><i class="fa fa-check"></i><b>8.3</b> Pomoćni paket <code>sloop</code></a></li>
+<li class="chapter" data-level="8.4" data-path="objekti.html"><a href="objekti.html#pregled-objektnog-modela-s3"><i class="fa fa-check"></i><b>8.4</b> Pregled objektnog modela S3</a></li>
+<li class="chapter" data-level="8.5" data-path="objekti.html"><a href="objekti.html#nasljeđivanje"><i class="fa fa-check"></i><b>8.5</b> Nasljeđivanje</a></li>
+<li class="chapter" data-level="8.6" data-path="objekti.html"><a href="objekti.html#generičke-funkcije"><i class="fa fa-check"></i><b>8.6</b> Generičke funkcije</a></li>
+<li class="chapter" data-level="8.7" data-path="objekti.html"><a href="objekti.html#mehanizam-generičkih-funkcija"><i class="fa fa-check"></i><b>8.7</b> Mehanizam generičkih funkcija</a></li>
+<li class="chapter" data-level="8.8" data-path="objekti.html"><a href="objekti.html#svojstva-generičke-funkcije"><i class="fa fa-check"></i><b>8.8</b> Svojstva generičke funkcije</a></li>
+<li class="chapter" data-level="8.9" data-path="objekti.html"><a href="objekti.html#implementacija-generičke-funkcije"><i class="fa fa-check"></i><b>8.9</b> Implementacija generičke funkcije</a></li>
+<li class="chapter" data-level="8.10" data-path="objekti.html"><a href="objekti.html#funkcija-methods"><i class="fa fa-check"></i><b>8.10</b> Funkcija <code>methods</code></a></li>
+<li class="chapter" data-level="8.11" data-path="objekti.html"><a href="objekti.html#zaključci-o-s3-objektima"><i class="fa fa-check"></i><b>8.11</b> Zaključci o S3 objektima</a></li>
+<li class="chapter" data-level="8.12" data-path="objekti.html"><a href="objekti.html#kratki-pregled-s4-objekata"><i class="fa fa-check"></i><b>8.12</b> Kratki pregled S4 objekata</a></li>
+<li class="chapter" data-level="" data-path="objekti.html"><a href="objekti.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="part"><span><b>II Upravljanje podacima i vizualizacije</b></span></li>
+<li class="chapter" data-level="9" data-path="cijev.html"><a href="cijev.html"><i class="fa fa-check"></i><b>9</b> Koncept urednih podataka</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="cijev.html"><a href="cijev.html#operator-cjevovoda"><i class="fa fa-check"></i><b>9.1</b> Operator cjevovoda</a></li>
+<li class="chapter" data-level="9.2" data-path="cijev.html"><a href="cijev.html#uredni-podaci"><i class="fa fa-check"></i><b>9.2</b> Uredni podaci</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="cijev.html"><a href="cijev.html#funkcije-pivot_longer-i-pivot_wider"><i class="fa fa-check"></i><b>9.2.1</b> Funkcije <code>pivot_longer</code> i <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="9.2.2" data-path="cijev.html"><a href="cijev.html#funkcije-separate-i-unite"><i class="fa fa-check"></i><b>9.2.2</b> Funkcije <code>separate</code> i <code>unite</code></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="cijev.html"><a href="cijev.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 </ul>
 
@@ -293,20 +357,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="paketi" class="section level1 hasAnchor">
+<div id="paketi" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> Paketi, ugrađene funkcije i okoline<a href="paketi.html#paketi" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
-<div id="rad-s-paketima" class="section level2 hasAnchor">
+<div id="rad-s-paketima" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Rad s paketima<a href="paketi.html#rad-s-paketima" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Standardna R distribucija dolazi sa dvije kolekcije paketa (nazvanih <code>r-base</code> i <code>r-recommended</code>) koje sadrže svojevrsnu “jezgru” jezika R - skup elemenata dostatnih za provođenje standardnih tipova podatkovnih analiza uz pomoć programskog jezika R. Uz to, <strong>CRAN</strong> (<em>Comprehensive R Archive Network</em>) predstavlja bogati repozitorij dodatnih paketa za najrazličitije primjene, od “popravljanja” osnovnih elemenata jezika R do strogo specijaliziranih paketa za posebne tipove analiza.</p>
 <p>Kao što je uobičajena praksa u drugim programskim jezicima, R koristi sustav “paketa” ili “biblioteka” (engl. <em>package</em> ili <em>library</em>) kako bi logički organizirao već “isprogramirane” kolekcije podataka, skupova i prevedenog programskog koda.</p>
 <p>Kod podizanja R okoline automatski se učitavaju određeni paketi u radnu memoriju čime njihovi elementi postaju dostupni za korištenje. Popis učitanih paketa možemo dobiti korištenjem funkcije <code>search</code>.</p>
 <hr />
 <p><strong>Zadatak 6.1 - staza pretrage</strong></p>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="paketi.html#cb197-1"></a><span class="co"># pozovite funkciju `search` (bez parametara) i pogledajte koji paketi su učitani u okolinu</span></span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="paketi.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pozovite funkciju `search` (bez parametara) i pogledajte koji paketi su učitani u okolinu</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="paketi.html#cb198-1"></a><span class="co"># pozovite funkciju `search` (bez parametara) i pogledajte koji paketi su učitani u okolinu</span></span>
-<span id="cb198-2"><a href="paketi.html#cb198-2"></a><span class="kw">search</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="paketi.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pozovite funkciju `search` (bez parametara) i pogledajte koji paketi su učitani u okolinu</span></span>
+<span id="cb200-2"><a href="paketi.html#cb200-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:kernlab&quot;   &quot;package:ranger&quot;   
 ##  [4] &quot;package:caret&quot;     &quot;package:e1071&quot;     &quot;package:corrplot&quot; 
 ##  [7] &quot;package:broom&quot;     &quot;package:car&quot;       &quot;package:carData&quot;  
@@ -326,34 +390,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ukoliko želimo učitati novi paket u našu okolinu, to možemo izvesti uz pomoć funkcije <code>library</code> kojoj dajemo ime paketa (bez navodnika).</p>
 <hr />
 <p><strong>Zadatak 6.2 - učitavanje paketa u radnu okolinu</strong></p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="paketi.html#cb200-1"></a><span class="co"># učitajte paket `dplyr` u R okolinu </span></span></code></pre></div>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="paketi.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># učitajte paket `dplyr` u R okolinu </span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="paketi.html#cb201-1"></a><span class="co"># učitajte paket `dplyr` u R okolinu </span></span>
-<span id="cb201-2"><a href="paketi.html#cb201-2"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="paketi.html#cb203-1" aria-hidden="true" tabindex="-1"></a><span class="co"># učitajte paket `dplyr` u R okolinu </span></span>
+<span id="cb203-2"><a href="paketi.html#cb203-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
 </div>
 <hr />
 <p>Naredba iz prethodnog primjera može imati dva ishoda: ukoliko paket postoji na lokalnom računalu (u mapi predodređenoj za dodatne pakete), on će biti učitan u radnu okolinu. Učitavanje paketa može biti popraćeno porukama o objektima koji su nakon učitavanja “maskirani”. To konkretno znači da je novi paket privremeno uskratio dostupnost pojedinim elementima iz ranije učitanih paketa iz razloga što im se podudaraju imena. Ovo često ne predstavlja nikakav problem, ali ukoliko korisnik ima potrebu za pristupom maskiranim elementima morati će koristiti njihovo “puno” ime tj. morati će navesti i ime paketa gdje se nalaze. Na primjer, ako je funkcija <code>filter</code> iz paketa <code>stats</code> maskirana nakon učitavanja novog paketa, ona je i dalje dostupna preko punog imena <code>stats::filter</code> ali ne direktno preko <code>filter</code>, budući da će to pozivati funkciju iz najnovije učitanog paketa. Više detalja o tome kako R razrješava nazive varijabli i funkcija biti će dano u nastavku ove lekcije.</p>
 <p>Ukoliko na lokalnom računalu nemamo navedeni paket dobivamo poruku o grešci da taj paket ne postoji. U tom slučaju potrebno je prvo dohvatiti paket iz CRAN repozitorija uz pomoć funkcije <code>install.packages</code> kojoj dajemo naziv jednog ili više paketa (s navodnicima!) kao parametre. Navedena funkcija pretpostavlja da R okolina ima definiran CRAN <em>mirror</em> tj. konkretnu adresu CRAN repozitorija odakle će se paket dohvatiti. Veliki broj država ima svoju “kopiju” CRAN repozitorija, no nažalost Republika Hrvatska iz nejasnih razloga više nema svoj CRAN repozitorij te u trenutku pisanja ove bilježnice nema pokazatelja da će se isti uspostaviti. Ako radimo u sučelju <em>RStudio</em>, CRAN repozitorij smo vrlo vjerojatno postavili kod prvog pokretanja, (tj. odabrali smo opciju <em>Global</em> koja naše zahtjeve za instaliranjem paketa automatski prosljeđuje najbližem CRAN repozitoriju) no ako to nismo obavili ili radimo u nekom drugom razvojnom sučelju onda uz pomoć dokumentacije moramo potražiti način postavljanja CRAN repozitorija ako želimo učitavati dodatne pakete.</p>
 <hr />
 <p><strong>Zadatak 6.3 - instalacija paketa sa CRAN repozitorija</strong></p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="paketi.html#cb202-1"></a><span class="co"># instalirajte paket `hflights` sa CRAN repozitorija</span></span>
-<span id="cb202-2"><a href="paketi.html#cb202-2"></a><span class="co"># (ovo možete učiniti čak i ako već imate navedeni paket)</span></span>
-<span id="cb202-3"><a href="paketi.html#cb202-3"></a></span>
-<span id="cb202-4"><a href="paketi.html#cb202-4"></a><span class="co"># učitajte paket u radnu okolinu</span></span>
-<span id="cb202-5"><a href="paketi.html#cb202-5"></a></span>
-<span id="cb202-6"><a href="paketi.html#cb202-6"></a><span class="co"># ispišite stazu pretrage</span></span></code></pre></div>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="paketi.html#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="co"># instalirajte paket `hflights` sa CRAN repozitorija</span></span>
+<span id="cb204-2"><a href="paketi.html#cb204-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (ovo možete učiniti čak i ako već imate navedeni paket)</span></span>
+<span id="cb204-3"><a href="paketi.html#cb204-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb204-4"><a href="paketi.html#cb204-4" aria-hidden="true" tabindex="-1"></a><span class="co"># učitajte paket u radnu okolinu</span></span>
+<span id="cb204-5"><a href="paketi.html#cb204-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb204-6"><a href="paketi.html#cb204-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite stazu pretrage</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="paketi.html#cb203-1"></a><span class="co"># instalirajte paket `hflights` sa CRAN repozitorija</span></span>
-<span id="cb203-2"><a href="paketi.html#cb203-2"></a><span class="co"># (ovo možete učiniti čak i ako već imate navedeni paket)</span></span>
-<span id="cb203-3"><a href="paketi.html#cb203-3"></a><span class="kw">install.packages</span>(<span class="st">&quot;hflights&quot;</span>)</span>
-<span id="cb203-4"><a href="paketi.html#cb203-4"></a></span>
-<span id="cb203-5"><a href="paketi.html#cb203-5"></a></span>
-<span id="cb203-6"><a href="paketi.html#cb203-6"></a><span class="co"># učitajte paket u radnu okolinu</span></span>
-<span id="cb203-7"><a href="paketi.html#cb203-7"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="paketi.html#cb205-1" aria-hidden="true" tabindex="-1"></a><span class="co"># instalirajte paket `hflights` sa CRAN repozitorija</span></span>
+<span id="cb205-2"><a href="paketi.html#cb205-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (ovo možete učiniti čak i ako već imate navedeni paket)</span></span>
+<span id="cb205-3"><a href="paketi.html#cb205-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;hflights&quot;</span>)</span>
+<span id="cb205-4"><a href="paketi.html#cb205-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb205-5"><a href="paketi.html#cb205-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb205-6"><a href="paketi.html#cb205-6" aria-hidden="true" tabindex="-1"></a><span class="co"># učitajte paket u radnu okolinu</span></span>
+<span id="cb205-7"><a href="paketi.html#cb205-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
 </div>
 <div class="fold s o">
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="paketi.html#cb204-1"></a><span class="co"># ispišite stazu pretrage</span></span>
-<span id="cb204-2"><a href="paketi.html#cb204-2"></a><span class="kw">search</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="paketi.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite stazu pretrage</span></span>
+<span id="cb206-2"><a href="paketi.html#cb206-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:kernlab&quot;   &quot;package:ranger&quot;   
 ##  [4] &quot;package:caret&quot;     &quot;package:e1071&quot;     &quot;package:corrplot&quot; 
 ##  [7] &quot;package:broom&quot;     &quot;package:car&quot;       &quot;package:carData&quot;  
@@ -372,57 +436,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr />
 <p>Uočimo da će instalacija i učitavanje paketa automatski sa sobom povući i učitavanje svih paketa koji su preduvjeti za korištenje traženog paketa, što uvelike olakšava rad korisniku koji se ne mora brinuti o tome što “dodatno” treba instalirati kako bi mogao koristiti elemente paketa.</p>
 <p>Ako želimo saznati više informacija o nekom paketu, to također možemo izvesti uz pomoć funkcije <code>library</code> uz parametar <code>help</code> postavljen na ime paketa.</p>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="paketi.html#cb206-1"></a><span class="kw">library</span>(<span class="dt">help =</span> dplyr)  <span class="co"># preporuka: isprobati direktno u konzoli</span></span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="paketi.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="at">help =</span> dplyr)  <span class="co"># preporuka: isprobati direktno u konzoli</span></span></code></pre></div>
 <p>Još jedan prilično popularan način dokumentiranja paketa je uz pomoć tzv. “vinjeta” (engl. <em>vignettes</em>). Vinjete su zapravo “mini-tutorial” nekog paketa u HTML obliku koji služi za predstavljanje funkcionalnosti paketa na pristupačan, čitljiv način uz pomoć detaljnih objašnjenja i pripadajućeg programskog koda. Možemo pogledati koje vinjete su instalirane na sustav pozivom funkcije <code>browseVignettes()</code> bez parametara (ili opcionalno dodati kao parametar imena paketa ako nas zanimaju samo njegove vinjete). Ako paket ima samo jednu vinjetu (npr. paket <code>stringr</code>). Možemo također odmah otvoriti vinjetu uz pomoć funkcije <code>vignette(ime_paketa)</code>.</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="paketi.html#cb207-1"></a><span class="kw">vignette</span>(<span class="st">&quot;stringr&quot;</span>)  <span class="co"># preporuka: isprobati direktno u konzoli</span></span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="paketi.html#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vignette</span>(<span class="st">&quot;stringr&quot;</span>)  <span class="co"># preporuka: isprobati direktno u konzoli</span></span></code></pre></div>
 <hr />
 </div>
-<div id="ugrađene-funkcije" class="section level2 hasAnchor">
+<div id="ugrađene-funkcije" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Ugrađene funkcije<a href="paketi.html#ugrađene-funkcije" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>U prethodnim poglavljima već smo upoznali neke od gotovih funkcija koje dobijamo zajedno sa našom R distribucijom. To su npr. numeričke funkcije (<code>log</code>, <code>abs</code>, <code>sqrt</code>, <code>round</code> i sl.), funkcije za stvaranje vektora (<code>rep</code>, <code>seq</code> i sl.), funkcije za rad s paketima (<code>install.packages</code>, <code>library</code> i sl.) i tako dalje.</p>
 <p>U R-u se rijetko govori o “ugrađenim” funkcijama budući da - kao što je već prikazano - R okolina automatski učitava neke često korištene pakete čiji su elementi odmah dostupni za korištenje, bez nužnog navođenja imena paketa u kojem se nalaze. Npr. paket <code>stats</code> sadrži bogati skup funkcija vezanih uz statističke obrade. Jedna od tih funkcija je i <code>rnorm</code> koja vraća numerički vektor željene duljine čiji su elementi nasumično odabrani iz normalne distribucije sa aritmetičkom sredinom 0 i standardnom devijacijom 1 (ove vrijednosti možemo i promijeniti uz pomoć parametara <code>mean</code> i <code>sd</code>). Ukoliko želimo, ovu funkciju možemo pozvati uz pomoć sintakse <code>ime_paketa::ime_funkcije(parametri)</code>.</p>
 <hr />
 <p><strong>Zadatak 6.4 - poziv funkcije iz definiranog paketa</strong></p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="paketi.html#cb208-1"></a><span class="co"># stvorite vektor x koji će imati 10 slučajnih elemenata</span></span>
-<span id="cb208-2"><a href="paketi.html#cb208-2"></a><span class="co"># izvučenih iz standardne normalne distribucije</span></span>
-<span id="cb208-3"><a href="paketi.html#cb208-3"></a><span class="co"># koristite puni naziv funkcije `rnorm` iz paketa `stats`</span></span>
-<span id="cb208-4"><a href="paketi.html#cb208-4"></a></span>
-<span id="cb208-5"><a href="paketi.html#cb208-5"></a></span>
-<span id="cb208-6"><a href="paketi.html#cb208-6"></a><span class="co"># zaokružite elemente vektora x na dvije decimale</span></span>
-<span id="cb208-7"><a href="paketi.html#cb208-7"></a><span class="co"># koristite puni naziv funkcije `round` iz paketa `base`</span></span>
-<span id="cb208-8"><a href="paketi.html#cb208-8"></a></span>
-<span id="cb208-9"><a href="paketi.html#cb208-9"></a><span class="co"># ispišite vektor x</span></span></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="paketi.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite vektor x koji će imati 10 slučajnih elemenata</span></span>
+<span id="cb210-2"><a href="paketi.html#cb210-2" aria-hidden="true" tabindex="-1"></a><span class="co"># izvučenih iz standardne normalne distribucije</span></span>
+<span id="cb210-3"><a href="paketi.html#cb210-3" aria-hidden="true" tabindex="-1"></a><span class="co"># koristite puni naziv funkcije `rnorm` iz paketa `stats`</span></span>
+<span id="cb210-4"><a href="paketi.html#cb210-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb210-5"><a href="paketi.html#cb210-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb210-6"><a href="paketi.html#cb210-6" aria-hidden="true" tabindex="-1"></a><span class="co"># zaokružite elemente vektora x na dvije decimale</span></span>
+<span id="cb210-7"><a href="paketi.html#cb210-7" aria-hidden="true" tabindex="-1"></a><span class="co"># koristite puni naziv funkcije `round` iz paketa `base`</span></span>
+<span id="cb210-8"><a href="paketi.html#cb210-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb210-9"><a href="paketi.html#cb210-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite vektor x</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="paketi.html#cb209-1"></a><span class="co"># stvorite vektor x koji će imati 10 slučajnih elemenata</span></span>
-<span id="cb209-2"><a href="paketi.html#cb209-2"></a><span class="co"># izvučenih iz standardne normalne distribucije</span></span>
-<span id="cb209-3"><a href="paketi.html#cb209-3"></a><span class="co"># koristite puni naziv funkcije `rnorm` iz paketa `stats`</span></span>
-<span id="cb209-4"><a href="paketi.html#cb209-4"></a>x &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb209-5"><a href="paketi.html#cb209-5"></a></span>
-<span id="cb209-6"><a href="paketi.html#cb209-6"></a><span class="co"># zaokružite elemente vektora x na dvije decimale</span></span>
-<span id="cb209-7"><a href="paketi.html#cb209-7"></a><span class="co"># koristite puni naziv funkcije `round` iz paketa `base`</span></span>
-<span id="cb209-8"><a href="paketi.html#cb209-8"></a>x &lt;-<span class="st"> </span>base<span class="op">::</span><span class="kw">round</span>(x, <span class="dv">2</span>)</span>
-<span id="cb209-9"><a href="paketi.html#cb209-9"></a></span>
-<span id="cb209-10"><a href="paketi.html#cb209-10"></a><span class="co"># ispišite vektor x</span></span>
-<span id="cb209-11"><a href="paketi.html#cb209-11"></a>x </span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="paketi.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite vektor x koji će imati 10 slučajnih elemenata</span></span>
+<span id="cb211-2"><a href="paketi.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="co"># izvučenih iz standardne normalne distribucije</span></span>
+<span id="cb211-3"><a href="paketi.html#cb211-3" aria-hidden="true" tabindex="-1"></a><span class="co"># koristite puni naziv funkcije `rnorm` iz paketa `stats`</span></span>
+<span id="cb211-4"><a href="paketi.html#cb211-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> stats<span class="sc">::</span><span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb211-5"><a href="paketi.html#cb211-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb211-6"><a href="paketi.html#cb211-6" aria-hidden="true" tabindex="-1"></a><span class="co"># zaokružite elemente vektora x na dvije decimale</span></span>
+<span id="cb211-7"><a href="paketi.html#cb211-7" aria-hidden="true" tabindex="-1"></a><span class="co"># koristite puni naziv funkcije `round` iz paketa `base`</span></span>
+<span id="cb211-8"><a href="paketi.html#cb211-8" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> base<span class="sc">::</span><span class="fu">round</span>(x, <span class="dv">2</span>)</span>
+<span id="cb211-9"><a href="paketi.html#cb211-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb211-10"><a href="paketi.html#cb211-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite vektor x</span></span>
+<span id="cb211-11"><a href="paketi.html#cb211-11" aria-hidden="true" tabindex="-1"></a>x </span></code></pre></div>
 <pre><code>##  [1]  0.04  0.11  1.43  0.98 -0.62 -0.73 -0.52 -1.75  0.88  1.37</code></pre>
 </div>
 <hr />
 <p>Iako je ovo sintaksno korektan način pozivanja funkcije, R nam omogućuje da izuzmemo nazive paketa i jednostavno navedemo samo naziv funkcije.</p>
 <hr />
 <p><strong>Zadatak 6.5 - poziv funkcije bez imena paketa</strong></p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="paketi.html#cb211-1"></a><span class="co"># stvorite vektor y po istom principu kao i vektor x</span></span>
-<span id="cb211-2"><a href="paketi.html#cb211-2"></a><span class="co"># obavite sve u jednom retku</span></span>
-<span id="cb211-3"><a href="paketi.html#cb211-3"></a><span class="co"># koristite nazive funkcija bez naziva paketa</span></span>
-<span id="cb211-4"><a href="paketi.html#cb211-4"></a></span>
-<span id="cb211-5"><a href="paketi.html#cb211-5"></a><span class="co"># ispišite y</span></span></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="paketi.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite vektor y po istom principu kao i vektor x</span></span>
+<span id="cb213-2"><a href="paketi.html#cb213-2" aria-hidden="true" tabindex="-1"></a><span class="co"># obavite sve u jednom retku</span></span>
+<span id="cb213-3"><a href="paketi.html#cb213-3" aria-hidden="true" tabindex="-1"></a><span class="co"># koristite nazive funkcija bez naziva paketa</span></span>
+<span id="cb213-4"><a href="paketi.html#cb213-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb213-5"><a href="paketi.html#cb213-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite y</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="paketi.html#cb212-1"></a><span class="co"># stvorite vektor y po istom principu kao i vektor x</span></span>
-<span id="cb212-2"><a href="paketi.html#cb212-2"></a><span class="co"># obavite sve u jednom retku</span></span>
-<span id="cb212-3"><a href="paketi.html#cb212-3"></a><span class="co"># koristite nazive funkcija bez naziva paketa</span></span>
-<span id="cb212-4"><a href="paketi.html#cb212-4"></a>y &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">rnorm</span>(<span class="dv">10</span>), <span class="dv">2</span>)</span>
-<span id="cb212-5"><a href="paketi.html#cb212-5"></a></span>
-<span id="cb212-6"><a href="paketi.html#cb212-6"></a><span class="co"># ispišite y</span></span>
-<span id="cb212-7"><a href="paketi.html#cb212-7"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="paketi.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite vektor y po istom principu kao i vektor x</span></span>
+<span id="cb214-2"><a href="paketi.html#cb214-2" aria-hidden="true" tabindex="-1"></a><span class="co"># obavite sve u jednom retku</span></span>
+<span id="cb214-3"><a href="paketi.html#cb214-3" aria-hidden="true" tabindex="-1"></a><span class="co"># koristite nazive funkcija bez naziva paketa</span></span>
+<span id="cb214-4"><a href="paketi.html#cb214-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="dv">2</span>)</span>
+<span id="cb214-5"><a href="paketi.html#cb214-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb214-6"><a href="paketi.html#cb214-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite y</span></span>
+<span id="cb214-7"><a href="paketi.html#cb214-7" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>##  [1] -1.69 -0.63  0.02  0.71 -0.65  0.87  0.38  0.31  0.01 -0.04</code></pre>
 </div>
 <hr />
@@ -432,7 +496,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Za kraj, spomenimo da nam R omogućuje brzo dohvaćanje pomoći o funkciji jednostavnim pozivom <code>?ime_funkcije</code> ili <code>help(ime_funkcije)</code> te da možemo dobiti primjere korištenja funkcije kroz <code>example(ime_funkcije)</code>. Ove pozive bismo trebali vrlo često koristiti čak i ako smatramo da smo dobro upoznati sa funkcijom koju pozivamo - lako je moguće da postoji neki dodatni parametar (ili srodna funkcija koje se također često navode u dokumentaciji) a koji će nam dodatno pomoći u obavljanju zadatka zbog kojeg funkciju i koristimo.</p>
 <hr />
 </div>
-<div id="okoline" class="section level2 hasAnchor">
+<div id="okoline" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Okoline<a href="paketi.html#okoline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Kao što je već rečeno, rad u R-u svodi se na upravljanje različitim objektima. Kako bismo uopće mogli upravljati tim objektima, potrebni su nam mehanizmi uz pomoć kojih referenciramo dotične objekte. U R-u se to zove “povezivanje” (engl. <em>binding</em>). Kada stvorimo varijablu <code>x</code> numeričkog tipa i njoj pridružimo broj <code>5</code>, mi smo zapravo stvorili (jednoelementni) numerički vektor i “povezali” taj podatak sa nizom znakova <code>"x"</code> kojeg potom možemo koristiti za daljnje referenciranje tog podatka (ili tih podataka).</p>
 <p>Stoga, kada želimo pristupiti nekoj varijabli, R mora pretražiti svoj interni “zapisnik” koje varijable trenutno postoje, kojeg su tipa te kako im pristupiti. Kako bi R pronašao varijablu, on koristi mehanizam zvan “leksičko uokviravanje” (engl. <em>lexical scoping</em>) koji se temelji na konceptu zvanom okoline (engl. <em>environments</em>).</p>
@@ -440,47 +504,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>“Osnovna” okolina u kojoj radimo i u kojoj stvaramo nove varijable je tzv. globalna okolina, ili <code>.GlobalEnv</code> (paziti na točku!). Ona je na dnu hijerarhije okolina. Možemo dohvatiti referencu na nju preko istoimene varijable, ili se poslužiti funkcijom <code>globalenv()</code>.</p>
 <hr />
 <p><strong>Zadatak 6.6 - globalna okolina</strong></p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="paketi.html#cb214-1"></a><span class="co"># stvorite varijablu e i u nju pohranite referencu na globalnu okolinu</span></span>
-<span id="cb214-2"><a href="paketi.html#cb214-2"></a></span>
-<span id="cb214-3"><a href="paketi.html#cb214-3"></a><span class="co"># ispišite varijablu e</span></span>
-<span id="cb214-4"><a href="paketi.html#cb214-4"></a></span>
-<span id="cb214-5"><a href="paketi.html#cb214-5"></a><span class="co"># stvorite varijablu x i u nju ubacite broj 5</span></span>
-<span id="cb214-6"><a href="paketi.html#cb214-6"></a></span>
-<span id="cb214-7"><a href="paketi.html#cb214-7"></a><span class="co"># izvršite funkciju `ls` bez parametara</span></span>
-<span id="cb214-8"><a href="paketi.html#cb214-8"></a></span>
-<span id="cb214-9"><a href="paketi.html#cb214-9"></a><span class="co"># izvršite funkciju `ls` sa varijablom `e` kao parametrom</span></span>
-<span id="cb214-10"><a href="paketi.html#cb214-10"></a></span>
-<span id="cb214-11"><a href="paketi.html#cb214-11"></a><span class="co"># ispišite x</span></span>
-<span id="cb214-12"><a href="paketi.html#cb214-12"></a></span>
-<span id="cb214-13"><a href="paketi.html#cb214-13"></a><span class="co"># ispišite e$x    (uočite sintaksu liste!)</span></span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="paketi.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite varijablu e i u nju pohranite referencu na globalnu okolinu</span></span>
+<span id="cb216-2"><a href="paketi.html#cb216-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-3"><a href="paketi.html#cb216-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite varijablu e</span></span>
+<span id="cb216-4"><a href="paketi.html#cb216-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-5"><a href="paketi.html#cb216-5" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite varijablu x i u nju ubacite broj 5</span></span>
+<span id="cb216-6"><a href="paketi.html#cb216-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-7"><a href="paketi.html#cb216-7" aria-hidden="true" tabindex="-1"></a><span class="co"># izvršite funkciju `ls` bez parametara</span></span>
+<span id="cb216-8"><a href="paketi.html#cb216-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-9"><a href="paketi.html#cb216-9" aria-hidden="true" tabindex="-1"></a><span class="co"># izvršite funkciju `ls` sa varijablom `e` kao parametrom</span></span>
+<span id="cb216-10"><a href="paketi.html#cb216-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-11"><a href="paketi.html#cb216-11" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite x</span></span>
+<span id="cb216-12"><a href="paketi.html#cb216-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-13"><a href="paketi.html#cb216-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite e$x    (uočite sintaksu liste!)</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="paketi.html#cb215-1"></a><span class="co"># stvorite varijablu e i u nju pohranite referencu na globalnu okolinu</span></span>
-<span id="cb215-2"><a href="paketi.html#cb215-2"></a>e &lt;-<span class="st"> </span>.GlobalEnv  <span class="co"># ili e &lt;- globalenv()</span></span>
-<span id="cb215-3"><a href="paketi.html#cb215-3"></a></span>
-<span id="cb215-4"><a href="paketi.html#cb215-4"></a><span class="co"># ispišite varijablu e</span></span>
-<span id="cb215-5"><a href="paketi.html#cb215-5"></a>e</span>
-<span id="cb215-6"><a href="paketi.html#cb215-6"></a></span>
-<span id="cb215-7"><a href="paketi.html#cb215-7"></a><span class="co"># stvorite varijablu x i u nju ubacite broj 5</span></span>
-<span id="cb215-8"><a href="paketi.html#cb215-8"></a>x &lt;-<span class="st"> </span><span class="dv">5</span></span>
-<span id="cb215-9"><a href="paketi.html#cb215-9"></a></span>
-<span id="cb215-10"><a href="paketi.html#cb215-10"></a><span class="co"># izvršite funkciju `ls` bez parametara</span></span>
-<span id="cb215-11"><a href="paketi.html#cb215-11"></a><span class="co">#ls()  # probati na konzoli!</span></span>
-<span id="cb215-12"><a href="paketi.html#cb215-12"></a></span>
-<span id="cb215-13"><a href="paketi.html#cb215-13"></a><span class="co"># izvršite funkciju `ls` sa varijablom `e` kao parametrom</span></span>
-<span id="cb215-14"><a href="paketi.html#cb215-14"></a><span class="co">#ls(e)  # probati na konzoli!</span></span>
-<span id="cb215-15"><a href="paketi.html#cb215-15"></a></span>
-<span id="cb215-16"><a href="paketi.html#cb215-16"></a><span class="co"># ispišite x</span></span>
-<span id="cb215-17"><a href="paketi.html#cb215-17"></a>x</span>
-<span id="cb215-18"><a href="paketi.html#cb215-18"></a></span>
-<span id="cb215-19"><a href="paketi.html#cb215-19"></a><span class="co"># ispišite e$x    (uočite sintaksu liste!)</span></span>
-<span id="cb215-20"><a href="paketi.html#cb215-20"></a>e<span class="op">$</span>x</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="paketi.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite varijablu e i u nju pohranite referencu na globalnu okolinu</span></span>
+<span id="cb217-2"><a href="paketi.html#cb217-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> .GlobalEnv  <span class="co"># ili e &lt;- globalenv()</span></span>
+<span id="cb217-3"><a href="paketi.html#cb217-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb217-4"><a href="paketi.html#cb217-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite varijablu e</span></span>
+<span id="cb217-5"><a href="paketi.html#cb217-5" aria-hidden="true" tabindex="-1"></a>e</span>
+<span id="cb217-6"><a href="paketi.html#cb217-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb217-7"><a href="paketi.html#cb217-7" aria-hidden="true" tabindex="-1"></a><span class="co"># stvorite varijablu x i u nju ubacite broj 5</span></span>
+<span id="cb217-8"><a href="paketi.html#cb217-8" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb217-9"><a href="paketi.html#cb217-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb217-10"><a href="paketi.html#cb217-10" aria-hidden="true" tabindex="-1"></a><span class="co"># izvršite funkciju `ls` bez parametara</span></span>
+<span id="cb217-11"><a href="paketi.html#cb217-11" aria-hidden="true" tabindex="-1"></a><span class="co">#ls()  # probati na konzoli!</span></span>
+<span id="cb217-12"><a href="paketi.html#cb217-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb217-13"><a href="paketi.html#cb217-13" aria-hidden="true" tabindex="-1"></a><span class="co"># izvršite funkciju `ls` sa varijablom `e` kao parametrom</span></span>
+<span id="cb217-14"><a href="paketi.html#cb217-14" aria-hidden="true" tabindex="-1"></a><span class="co">#ls(e)  # probati na konzoli!</span></span>
+<span id="cb217-15"><a href="paketi.html#cb217-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb217-16"><a href="paketi.html#cb217-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite x</span></span>
+<span id="cb217-17"><a href="paketi.html#cb217-17" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb217-18"><a href="paketi.html#cb217-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb217-19"><a href="paketi.html#cb217-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite e$x    (uočite sintaksu liste!)</span></span>
+<span id="cb217-20"><a href="paketi.html#cb217-20" aria-hidden="true" tabindex="-1"></a>e<span class="sc">$</span>x</span></code></pre></div>
 <pre><code>## &lt;environment: R_GlobalEnv&gt;
 ## [1] 5
 ## [1] 5</code></pre>
 </div>
 <hr />
 <p>Iz zadnjeg primjera možemo vidjeti da okolina bez problema može čuvati i referencu na samu sebe obliku varijable e, tako da je ovo zapravo potpuno ispravna (iako nepotrebno komplicirana) sintaksa za ispis varijable <code>x</code>:</p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="paketi.html#cb217-1"></a>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>e<span class="op">$</span>x</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="paketi.html#cb219-1" aria-hidden="true" tabindex="-1"></a>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>e<span class="sc">$</span>x</span></code></pre></div>
 <p>Okoline su u izvjesnoj mjeri slične listama, koje su isto zapravo svojevrsni način “enkapsulacije” niza objekata u jedinstvenu strukturu. Najbitnije razlike između okoline i liste su:</p>
 <ul>
 <li>poredak elemenata u okolini je nebitan</li>
@@ -489,39 +553,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Pogledajmo tko je okolina-roditelj globalnoj okolini uz pomoć funkcije <code>parent.env</code>.</p>
 <hr />
 <p><strong>Zadatak 6.7 - okoline roditelji</strong></p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="paketi.html#cb218-1"></a><span class="co"># ispišite okolinu-roditelja globalne okoline i objasnite rezultat</span></span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="paketi.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite okolinu-roditelja globalne okoline i objasnite rezultat</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="paketi.html#cb219-1"></a><span class="co"># ispišite okolinu-roditelja globalne okoline i objasnite rezultat</span></span>
-<span id="cb219-2"><a href="paketi.html#cb219-2"></a><span class="kw">parent.env</span>(e)</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="paketi.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite okolinu-roditelja globalne okoline i objasnite rezultat</span></span>
+<span id="cb221-2"><a href="paketi.html#cb221-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parent.env</span>(e)</span></code></pre></div>
 <pre><code>## &lt;environment: package:kernlab&gt;
 ## attr(,&quot;name&quot;)
 ## [1] &quot;package:kernlab&quot;
 ## attr(,&quot;path&quot;)
-## [1] &quot;C:/R/R-4.1.2/library/kernlab&quot;</code></pre>
+## [1] &quot;C:/R/R-4.2.1/library/kernlab&quot;</code></pre>
 </div>
 <hr />
 <p>Pomalo neočekivano, roditelj globalne okoline jest zadnje učitani paket! Ovo zapravo nije neobično - globalna okolina ima “prioritet” kod referenciranja varijable, ali prioritetno odmah “ispod” nje su oni objekti i funkcije koje smo zadnje učitali u okolinu (što nam odgovara budući da je pretpostavka da je “najsvježije” učitani paket onaj kojeg namjeravamo odmah koristiti). Drugim riječima, učitavanjem paketa novi paket se uvijek “namjesti” između globalne okoline i paketa koji je prije njega bio zadnji učitan. Kada smo pozivali funkciju <code>search</code>, zapravo smo dobili hijerarhiju okolina koje predstavljaju učitane pakete. Ova hijerarhija okolina ujedno predstavlja i već spominjanu “stazu pretrage”.</p>
 <p>Uz pomoć funkcije <code>parent.env</code> možemo sami odrediti koju okolinu će neka okolina smatrati roditeljem. Na ovaj način možemo napraviti vlastitu hijerarhiju okolina. Nadalje varijable koje stvaramo ne moraju koristiti reference iz globalne okoline (što je zapravo i osnovna funkcija operatora <code>&lt;-</code>), mi ih možemo pohraniti u bilo koju okolinu koju želimo, no za to se moramo koristiti funkcijama <code>assign</code> i <code>get</code> ili kombinacijom operatora <code>$</code> i <code>&lt;-</code>.</p>
 <hr />
 <div class="fold o">
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="paketi.html#cb221-1"></a><span class="co"># primjer - stvaramo malu hijerarhiju okolina i pohranjujemo</span></span>
-<span id="cb221-2"><a href="paketi.html#cb221-2"></a><span class="co"># te ispisujemo varijablu koristeći jednu od njih</span></span>
-<span id="cb221-3"><a href="paketi.html#cb221-3"></a></span>
-<span id="cb221-4"><a href="paketi.html#cb221-4"></a>e2 &lt;-<span class="st"> </span><span class="kw">new.env</span>()</span>
-<span id="cb221-5"><a href="paketi.html#cb221-5"></a>e3 &lt;-<span class="st"> </span><span class="kw">new.env</span>()</span>
-<span id="cb221-6"><a href="paketi.html#cb221-6"></a></span>
-<span id="cb221-7"><a href="paketi.html#cb221-7"></a><span class="co">#  hijerarhija `e3` --&gt; `e2` --&gt; `e` (globalna)</span></span>
-<span id="cb221-8"><a href="paketi.html#cb221-8"></a><span class="kw">parent.env</span>(e2) &lt;-<span class="st"> </span>e       </span>
-<span id="cb221-9"><a href="paketi.html#cb221-9"></a><span class="kw">parent.env</span>(e3) &lt;-<span class="st"> </span>e2</span>
-<span id="cb221-10"><a href="paketi.html#cb221-10"></a></span>
-<span id="cb221-11"><a href="paketi.html#cb221-11"></a><span class="co"># stvaramo varijablu `x` u okolini `e2`</span></span>
-<span id="cb221-12"><a href="paketi.html#cb221-12"></a><span class="kw">assign</span>(<span class="st">&quot;x&quot;</span>, <span class="dv">5</span>, e2)     <span class="co">#  ili e2$x &lt;- 5   </span></span>
-<span id="cb221-13"><a href="paketi.html#cb221-13"></a></span>
-<span id="cb221-14"><a href="paketi.html#cb221-14"></a><span class="co"># provjera postoji li varijabla `x` u okolini `e2`</span></span>
-<span id="cb221-15"><a href="paketi.html#cb221-15"></a><span class="kw">exists</span>(<span class="st">&quot;x&quot;</span>, e2)</span>
-<span id="cb221-16"><a href="paketi.html#cb221-16"></a></span>
-<span id="cb221-17"><a href="paketi.html#cb221-17"></a><span class="co"># ispis varijable `x` iz okoline e2</span></span>
-<span id="cb221-18"><a href="paketi.html#cb221-18"></a><span class="kw">get</span>(<span class="st">&quot;x&quot;</span>, e2)       <span class="co">#ili e2$x</span></span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="paketi.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="co"># primjer - stvaramo malu hijerarhiju okolina i pohranjujemo</span></span>
+<span id="cb223-2"><a href="paketi.html#cb223-2" aria-hidden="true" tabindex="-1"></a><span class="co"># te ispisujemo varijablu koristeći jednu od njih</span></span>
+<span id="cb223-3"><a href="paketi.html#cb223-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb223-4"><a href="paketi.html#cb223-4" aria-hidden="true" tabindex="-1"></a>e2 <span class="ot">&lt;-</span> <span class="fu">new.env</span>()</span>
+<span id="cb223-5"><a href="paketi.html#cb223-5" aria-hidden="true" tabindex="-1"></a>e3 <span class="ot">&lt;-</span> <span class="fu">new.env</span>()</span>
+<span id="cb223-6"><a href="paketi.html#cb223-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb223-7"><a href="paketi.html#cb223-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  hijerarhija `e3` --&gt; `e2` --&gt; `e` (globalna)</span></span>
+<span id="cb223-8"><a href="paketi.html#cb223-8" aria-hidden="true" tabindex="-1"></a><span class="fu">parent.env</span>(e2) <span class="ot">&lt;-</span> e       </span>
+<span id="cb223-9"><a href="paketi.html#cb223-9" aria-hidden="true" tabindex="-1"></a><span class="fu">parent.env</span>(e3) <span class="ot">&lt;-</span> e2</span>
+<span id="cb223-10"><a href="paketi.html#cb223-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb223-11"><a href="paketi.html#cb223-11" aria-hidden="true" tabindex="-1"></a><span class="co"># stvaramo varijablu `x` u okolini `e2`</span></span>
+<span id="cb223-12"><a href="paketi.html#cb223-12" aria-hidden="true" tabindex="-1"></a><span class="fu">assign</span>(<span class="st">&quot;x&quot;</span>, <span class="dv">5</span>, e2)     <span class="co">#  ili e2$x &lt;- 5   </span></span>
+<span id="cb223-13"><a href="paketi.html#cb223-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb223-14"><a href="paketi.html#cb223-14" aria-hidden="true" tabindex="-1"></a><span class="co"># provjera postoji li varijabla `x` u okolini `e2`</span></span>
+<span id="cb223-15"><a href="paketi.html#cb223-15" aria-hidden="true" tabindex="-1"></a><span class="fu">exists</span>(<span class="st">&quot;x&quot;</span>, e2)</span>
+<span id="cb223-16"><a href="paketi.html#cb223-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb223-17"><a href="paketi.html#cb223-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ispis varijable `x` iz okoline e2</span></span>
+<span id="cb223-18"><a href="paketi.html#cb223-18" aria-hidden="true" tabindex="-1"></a><span class="fu">get</span>(<span class="st">&quot;x&quot;</span>, e2)       <span class="co">#ili e2$x</span></span></code></pre></div>
 <pre><code>## [1] TRUE
 ## [1] 5</code></pre>
 </div>
@@ -530,60 +594,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Za kraj demonstrirajmo rad funkcije <code>attach</code> koju analitičari često koriste kako bi ubrzali postupak analize ali koja može uzrokovati probleme ako nismo pažljivi sa njenim korištenjem. Ova funkcija ubaciti će podatkovni okvir direktno u stazu pretrage kako bi nam omogućila “lakši” pristup varijablama, ni uz potencijalne nezgodne nuspojave. Pogledajmo ovo na primjeru.</p>
 <hr />
 <p><strong>Zadatak 6.8 - funkcija <code>attach</code></strong></p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="paketi.html#cb223-1"></a>mjesto &lt;-<span class="st"> </span><span class="kw">data.frame</span>( <span class="dt">pbr =</span> <span class="kw">c</span>(<span class="dv">10000</span>, <span class="dv">51000</span>, <span class="dv">21000</span>, <span class="dv">31000</span>, <span class="dv">2000</span>),</span>
-<span id="cb223-2"><a href="paketi.html#cb223-2"></a>         <span class="dt">nazivMjesta =</span> <span class="kw">c</span>(<span class="st">&quot;Zagreb&quot;</span>, <span class="st">&quot;Rijeka&quot;</span>, <span class="st">&quot;Split&quot;</span>, <span class="st">&quot;Osijek&quot;</span>, <span class="st">&quot;Dubrovnik&quot;</span>),</span>
-<span id="cb223-3"><a href="paketi.html#cb223-3"></a>         <span class="dt">prosjPlacaKn =</span> <span class="kw">c</span>(<span class="fl">6359.</span>, <span class="fl">5418.</span>, <span class="fl">5170.</span>, <span class="fl">4892.</span>, <span class="fl">5348.</span>),</span>
-<span id="cb223-4"><a href="paketi.html#cb223-4"></a>         <span class="dt">brojStanovnika =</span> <span class="kw">c</span>(<span class="dv">790017</span>, <span class="dv">128384</span>, <span class="dv">167121</span>, <span class="dv">84104</span>, <span class="dv">28434</span>),</span>
-<span id="cb223-5"><a href="paketi.html#cb223-5"></a>         <span class="dt">prirez =</span> <span class="kw">c</span>(<span class="dv">18</span>, <span class="dv">15</span>, <span class="dv">10</span>, <span class="dv">13</span>, <span class="dv">10</span>))</span>
-<span id="cb223-6"><a href="paketi.html#cb223-6"></a></span>
-<span id="cb223-7"><a href="paketi.html#cb223-7"></a><span class="co"># pozovite funkciju `attach` i proslijedite podatkovni okvir `mjesto` kao parametar</span></span>
-<span id="cb223-8"><a href="paketi.html#cb223-8"></a><span class="co"># ovo napravite samo jednom kako ne bi okvir ubacili više puta u stazu pretrage</span></span>
-<span id="cb223-9"><a href="paketi.html#cb223-9"></a></span>
-<span id="cb223-10"><a href="paketi.html#cb223-10"></a></span>
-<span id="cb223-11"><a href="paketi.html#cb223-11"></a><span class="co"># ispišite stazu pretrage i komentirajte rezultat</span></span>
-<span id="cb223-12"><a href="paketi.html#cb223-12"></a></span>
-<span id="cb223-13"><a href="paketi.html#cb223-13"></a></span>
-<span id="cb223-14"><a href="paketi.html#cb223-14"></a><span class="co"># ispišite varijablu pbr (bez reference na `mjesto`!)</span></span>
-<span id="cb223-15"><a href="paketi.html#cb223-15"></a></span>
-<span id="cb223-16"><a href="paketi.html#cb223-16"></a></span>
-<span id="cb223-17"><a href="paketi.html#cb223-17"></a><span class="co"># promjenite treći element varijable prirez na 12</span></span>
-<span id="cb223-18"><a href="paketi.html#cb223-18"></a></span>
-<span id="cb223-19"><a href="paketi.html#cb223-19"></a></span>
-<span id="cb223-20"><a href="paketi.html#cb223-20"></a><span class="co"># ispišite tablicu `mjesto`</span></span>
-<span id="cb223-21"><a href="paketi.html#cb223-21"></a></span>
-<span id="cb223-22"><a href="paketi.html#cb223-22"></a></span>
-<span id="cb223-23"><a href="paketi.html#cb223-23"></a><span class="co"># ispišite varijable globalne okoline</span></span>
-<span id="cb223-24"><a href="paketi.html#cb223-24"></a></span>
-<span id="cb223-25"><a href="paketi.html#cb223-25"></a></span>
-<span id="cb223-26"><a href="paketi.html#cb223-26"></a><span class="co"># uz pomoć funkcije `detach` uklonite tablicu `mjesto` iz staze pretrage</span></span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="paketi.html#cb225-1" aria-hidden="true" tabindex="-1"></a>mjesto <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">pbr =</span> <span class="fu">c</span>(<span class="dv">10000</span>, <span class="dv">51000</span>, <span class="dv">21000</span>, <span class="dv">31000</span>, <span class="dv">2000</span>),</span>
+<span id="cb225-2"><a href="paketi.html#cb225-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">nazivMjesta =</span> <span class="fu">c</span>(<span class="st">&quot;Zagreb&quot;</span>, <span class="st">&quot;Rijeka&quot;</span>, <span class="st">&quot;Split&quot;</span>, <span class="st">&quot;Osijek&quot;</span>, <span class="st">&quot;Dubrovnik&quot;</span>),</span>
+<span id="cb225-3"><a href="paketi.html#cb225-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">prosjPlacaKn =</span> <span class="fu">c</span>(<span class="fl">6359.</span>, <span class="fl">5418.</span>, <span class="fl">5170.</span>, <span class="fl">4892.</span>, <span class="fl">5348.</span>),</span>
+<span id="cb225-4"><a href="paketi.html#cb225-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">brojStanovnika =</span> <span class="fu">c</span>(<span class="dv">790017</span>, <span class="dv">128384</span>, <span class="dv">167121</span>, <span class="dv">84104</span>, <span class="dv">28434</span>),</span>
+<span id="cb225-5"><a href="paketi.html#cb225-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">prirez =</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">15</span>, <span class="dv">10</span>, <span class="dv">13</span>, <span class="dv">10</span>))</span>
+<span id="cb225-6"><a href="paketi.html#cb225-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-7"><a href="paketi.html#cb225-7" aria-hidden="true" tabindex="-1"></a><span class="co"># pozovite funkciju `attach` i proslijedite podatkovni okvir `mjesto` kao parametar</span></span>
+<span id="cb225-8"><a href="paketi.html#cb225-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ovo napravite samo jednom kako ne bi okvir ubacili više puta u stazu pretrage</span></span>
+<span id="cb225-9"><a href="paketi.html#cb225-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-10"><a href="paketi.html#cb225-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-11"><a href="paketi.html#cb225-11" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite stazu pretrage i komentirajte rezultat</span></span>
+<span id="cb225-12"><a href="paketi.html#cb225-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-13"><a href="paketi.html#cb225-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-14"><a href="paketi.html#cb225-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite varijablu pbr (bez reference na `mjesto`!)</span></span>
+<span id="cb225-15"><a href="paketi.html#cb225-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-16"><a href="paketi.html#cb225-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-17"><a href="paketi.html#cb225-17" aria-hidden="true" tabindex="-1"></a><span class="co"># promjenite treći element varijable prirez na 12</span></span>
+<span id="cb225-18"><a href="paketi.html#cb225-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-19"><a href="paketi.html#cb225-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-20"><a href="paketi.html#cb225-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite tablicu `mjesto`</span></span>
+<span id="cb225-21"><a href="paketi.html#cb225-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-22"><a href="paketi.html#cb225-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-23"><a href="paketi.html#cb225-23" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite varijable globalne okoline</span></span>
+<span id="cb225-24"><a href="paketi.html#cb225-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-25"><a href="paketi.html#cb225-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb225-26"><a href="paketi.html#cb225-26" aria-hidden="true" tabindex="-1"></a><span class="co"># uz pomoć funkcije `detach` uklonite tablicu `mjesto` iz staze pretrage</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="paketi.html#cb224-1"></a><span class="co"># pozovite funkciju `attach` i proslijedite podatkovni okvir `mjesto` kao parametar</span></span>
-<span id="cb224-2"><a href="paketi.html#cb224-2"></a><span class="co"># ovo napravite samo jednom kako ne bi okvir ubacili više puta u stazu pretrage</span></span>
-<span id="cb224-3"><a href="paketi.html#cb224-3"></a><span class="kw">attach</span>(mjesto)</span>
-<span id="cb224-4"><a href="paketi.html#cb224-4"></a></span>
-<span id="cb224-5"><a href="paketi.html#cb224-5"></a><span class="co"># ispišite stazu pretrage i komentirajte rezultat</span></span>
-<span id="cb224-6"><a href="paketi.html#cb224-6"></a><span class="kw">search</span>()</span>
-<span id="cb224-7"><a href="paketi.html#cb224-7"></a></span>
-<span id="cb224-8"><a href="paketi.html#cb224-8"></a><span class="kw">cat</span>(<span class="st">&quot;-------------------------</span><span class="ch">\n</span><span class="st">&quot;</span>)    <span class="co"># radi preglednijeg ispisa</span></span>
-<span id="cb224-9"><a href="paketi.html#cb224-9"></a></span>
-<span id="cb224-10"><a href="paketi.html#cb224-10"></a><span class="co"># ispišite varijablu pbr (bez reference na `mjesto`!)</span></span>
-<span id="cb224-11"><a href="paketi.html#cb224-11"></a>pbr</span>
-<span id="cb224-12"><a href="paketi.html#cb224-12"></a></span>
-<span id="cb224-13"><a href="paketi.html#cb224-13"></a><span class="kw">cat</span>(<span class="st">&quot;-------------------------</span><span class="ch">\n</span><span class="st">&quot;</span>)    <span class="co"># radi preglednijeg ispisa</span></span>
-<span id="cb224-14"><a href="paketi.html#cb224-14"></a></span>
-<span id="cb224-15"><a href="paketi.html#cb224-15"></a><span class="co"># promjenite treći element varijable prirez na 12</span></span>
-<span id="cb224-16"><a href="paketi.html#cb224-16"></a>prirez[<span class="dv">3</span>] &lt;-<span class="st"> </span><span class="dv">12</span></span>
-<span id="cb224-17"><a href="paketi.html#cb224-17"></a></span>
-<span id="cb224-18"><a href="paketi.html#cb224-18"></a><span class="co"># ispišite tablicu `mjesto`</span></span>
-<span id="cb224-19"><a href="paketi.html#cb224-19"></a>mjesto</span>
-<span id="cb224-20"><a href="paketi.html#cb224-20"></a></span>
-<span id="cb224-21"><a href="paketi.html#cb224-21"></a><span class="kw">cat</span>(<span class="st">&quot;-------------------------</span><span class="ch">\n</span><span class="st">&quot;</span>)    <span class="co"># radi preglednijeg ispisa</span></span>
-<span id="cb224-22"><a href="paketi.html#cb224-22"></a></span>
-<span id="cb224-23"><a href="paketi.html#cb224-23"></a><span class="co"># ispišite varijable globalne okoline</span></span>
-<span id="cb224-24"><a href="paketi.html#cb224-24"></a><span class="co">#ls()  # probati na konzoli!</span></span>
-<span id="cb224-25"><a href="paketi.html#cb224-25"></a></span>
-<span id="cb224-26"><a href="paketi.html#cb224-26"></a><span class="co"># uz pomoć funkcije `detach` uklonite tablicu `mjesto` iz staze pretrage</span></span>
-<span id="cb224-27"><a href="paketi.html#cb224-27"></a><span class="kw">detach</span>(mjesto)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="paketi.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pozovite funkciju `attach` i proslijedite podatkovni okvir `mjesto` kao parametar</span></span>
+<span id="cb226-2"><a href="paketi.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ovo napravite samo jednom kako ne bi okvir ubacili više puta u stazu pretrage</span></span>
+<span id="cb226-3"><a href="paketi.html#cb226-3" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(mjesto)</span>
+<span id="cb226-4"><a href="paketi.html#cb226-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-5"><a href="paketi.html#cb226-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite stazu pretrage i komentirajte rezultat</span></span>
+<span id="cb226-6"><a href="paketi.html#cb226-6" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span>
+<span id="cb226-7"><a href="paketi.html#cb226-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-8"><a href="paketi.html#cb226-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-------------------------</span><span class="sc">\n</span><span class="st">&quot;</span>)    <span class="co"># radi preglednijeg ispisa</span></span>
+<span id="cb226-9"><a href="paketi.html#cb226-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-10"><a href="paketi.html#cb226-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite varijablu pbr (bez reference na `mjesto`!)</span></span>
+<span id="cb226-11"><a href="paketi.html#cb226-11" aria-hidden="true" tabindex="-1"></a>pbr</span>
+<span id="cb226-12"><a href="paketi.html#cb226-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-13"><a href="paketi.html#cb226-13" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-------------------------</span><span class="sc">\n</span><span class="st">&quot;</span>)    <span class="co"># radi preglednijeg ispisa</span></span>
+<span id="cb226-14"><a href="paketi.html#cb226-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-15"><a href="paketi.html#cb226-15" aria-hidden="true" tabindex="-1"></a><span class="co"># promjenite treći element varijable prirez na 12</span></span>
+<span id="cb226-16"><a href="paketi.html#cb226-16" aria-hidden="true" tabindex="-1"></a>prirez[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb226-17"><a href="paketi.html#cb226-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-18"><a href="paketi.html#cb226-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite tablicu `mjesto`</span></span>
+<span id="cb226-19"><a href="paketi.html#cb226-19" aria-hidden="true" tabindex="-1"></a>mjesto</span>
+<span id="cb226-20"><a href="paketi.html#cb226-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-21"><a href="paketi.html#cb226-21" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-------------------------</span><span class="sc">\n</span><span class="st">&quot;</span>)    <span class="co"># radi preglednijeg ispisa</span></span>
+<span id="cb226-22"><a href="paketi.html#cb226-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-23"><a href="paketi.html#cb226-23" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite varijable globalne okoline</span></span>
+<span id="cb226-24"><a href="paketi.html#cb226-24" aria-hidden="true" tabindex="-1"></a><span class="co">#ls()  # probati na konzoli!</span></span>
+<span id="cb226-25"><a href="paketi.html#cb226-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb226-26"><a href="paketi.html#cb226-26" aria-hidden="true" tabindex="-1"></a><span class="co"># uz pomoć funkcije `detach` uklonite tablicu `mjesto` iz staze pretrage</span></span>
+<span id="cb226-27"><a href="paketi.html#cb226-27" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(mjesto)</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;mjesto&quot;            &quot;package:kernlab&quot;  
 ##  [4] &quot;package:ranger&quot;    &quot;package:caret&quot;     &quot;package:e1071&quot;    
 ##  [7] &quot;package:corrplot&quot;  &quot;package:broom&quot;     &quot;package:car&quot;      
@@ -612,7 +676,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Objasnimo što se dogodilo u gornjem primjeru. Uz pomoć funkcije <code>attach</code> podatkovni okvir <code>mjesto</code> postao je “mini-okolina”, tj. njegovi stupci postali su dostupni unutar staze pretrage. Očiti benefit ovoga jest to da ih možemo referencirati direktno, bez reference na originalni podatkovni okvir i operatora <code>$</code>. No ovaj naočigled praktičan trik ima skrivene zamke - prvo, ako se imena stupaca podudaraju sa postojećim varijablama globalne okoline, onda ti stupci neće biti vidljivi (o ovom ćemo biti obaviješteni adekvatnim upozorenjem). Drugo - i puno problematičnije - ako pokušamo mijenjati stupac okvira direktnim referenciranjem, R će to spriječiti i potiho će primijeniti <em>copy-on-modify</em> princip stvaranjem nove, globalne varijable koja će biti kopija referenciranog stupca. Neopreznom analitičaru tako može promaknuti činjenica da se promjene koje naizgled unosi uopće ne odražavaju na samom podatkovnom okviru, što može imati dalekosežne posljedice.</p>
 <p>Ovi potencijalni problemi su vrlo rašireni među početnicima u jeziku R tako da se u literaturi često može naći preporuka da se funkcija <code>attach</code> ne koristi ukoliko to iz nekog razloga nije nužno. Npr. <a href = "https://google.github.io/styleguide/Rguide.xml">Google-ov stilski vodič za R</a> kaže “mogućnosti greške kod korištenja funkcije <code>attach</code> su brojne, zato ju izbjegavajte”.</p>
 <p>Još jedna mogućnost koju imamo jest korištenje funkcije <code>with</code> kojoj prvo dajemo referencu na okolinu, a potom izraz koji koristi varijable iz te okoline:</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="paketi.html#cb226-1"></a><span class="kw">with</span>(mjesto, prosjPlacaKn[prirez <span class="op">&gt;</span><span class="st"> </span><span class="dv">12</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="paketi.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(mjesto, prosjPlacaKn[prirez <span class="sc">&gt;</span> <span class="dv">12</span>])</span></code></pre></div>
 <p>no u većini slučajeva korištenje ove funkcije neće rezultirati čitljivom sintaksom već upravo naprotiv - programski kod se dodatno komplicira. Ukoliko želimo izbjeći stalno referenciranje podatkovnog okvira u izrazima, za to postoje novi paketi upravo namjenjenih lakom upravljanju podatkovnih okvirima uz pomoć čiste i pregledne sintakse, kao npr. <code>dplyr</code> ili <code>tidyr</code>. Ove pakete upoznati ćemo u jednoj od nastupajućih lekcija.</p>
 <hr />
 </div>
@@ -622,10 +686,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Učitajte sljedeće pakete u radnu okolinu: <code>magrittr</code>, <code>dplyr</code>, <code>tidyr</code>, <code>ggplot2</code>. Ispišite stazu pretrage i provjerite gdje se nalaze učitani paketi.</p></li>
 <li><p>Sljedeća naredba stvoriti će vektor od 20 nasumično odabranih prirodnih brojeva od 1 do 100. Uz pomoć podsjetnika i/ili službene dokumentacije pronađite ugrađene funkcije koje izvršavaju zadane zadatke.</p></li>
 </ol>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="paketi.html#cb227-1"></a><span class="co"># učitavamo 20 prirodnih brojeva od 1 do 100, sa ponavljanjem</span></span>
-<span id="cb227-2"><a href="paketi.html#cb227-2"></a></span>
-<span id="cb227-3"><a href="paketi.html#cb227-3"></a><span class="kw">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb227-4"><a href="paketi.html#cb227-4"></a>a &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">100</span>, <span class="dv">20</span>, <span class="dt">replace =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="paketi.html#cb229-1" aria-hidden="true" tabindex="-1"></a><span class="co"># učitavamo 20 prirodnih brojeva od 1 do 100, sa ponavljanjem</span></span>
+<span id="cb229-2"><a href="paketi.html#cb229-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb229-3"><a href="paketi.html#cb229-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb229-4"><a href="paketi.html#cb229-4" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>, <span class="at">replace =</span> T)</span></code></pre></div>
 <p>ispišite:</p>
 <ul>
 <li>vektor a</li>
