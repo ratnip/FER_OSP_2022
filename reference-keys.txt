@@ -71,3 +71,11 @@ operator-cjevovoda
 uredni-podaci
 funkcije-pivot_longer-i-pivot_wider
 funkcije-separate-i-unite
+datumi
+rad-sa-datumima
+klasa-date
+klase-posixct-i-posixlt
+paket-lubridate
+rad-sa-znakovnim-nizovima
+analiza-teksta-i-regularni-izrazi
+paket-stringr
