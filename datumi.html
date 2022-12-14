@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2022-12-07" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="cijev.html"/>
-
+<link rel="next" href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -355,6 +355,18 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>11</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#ogledni-podatkovni-skup-titanic"><i class="fa fa-check"></i><b>11.1</b> Ogledni podatkovni skup: <em>Titanic</em></a></li>
+<li class="chapter" data-level="11.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-podskupa-obzervacija-uz-filter-i-slice"><i class="fa fa-check"></i><b>11.2</b> Stvaranje podskupa obzervacija uz <code>filter</code> i <code>slice</code></a></li>
+<li class="chapter" data-level="11.3" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-podskupa-varijabli-uz-select"><i class="fa fa-check"></i><b>11.3</b> Stvaranje podskupa varijabli uz <code>select</code></a></li>
+<li class="chapter" data-level="11.4" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-novih-stupaca-uz-mutate"><i class="fa fa-check"></i><b>11.4</b> Stvaranje novih stupaca uz <code>mutate</code></a></li>
+<li class="chapter" data-level="11.5" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#ogledni-podatkovni-skup-houston-flights"><i class="fa fa-check"></i><b>11.5</b> Ogledni podatkovni skup: <em>Houston flights</em></a></li>
+<li class="chapter" data-level="11.6" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#grupiranje-i-agregacija-uz-group_by-i-summarise"><i class="fa fa-check"></i><b>11.6</b> Grupiranje i agregacija uz <code>group_by</code> i <code>summarise</code></a></li>
+<li class="chapter" data-level="11.7" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#spajanje-podatkovnih-okvira-uz-join-funkcije"><i class="fa fa-check"></i><b>11.7</b> Spajanje podatkovnih okvira uz join funkcije</a></li>
+<li class="chapter" data-level="11.8" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#integracija-sa-relacijskim-bazama-podataka"><i class="fa fa-check"></i><b>11.8</b> Integracija sa relacijskim bazama podataka</a></li>
+<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -415,7 +427,7 @@ div.csl-indent {
 <span id="cb386-7"><a href="datumi.html#cb386-7" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="st">&#39;2016-31-05&#39;</span>, <span class="at">format =</span> <span class="st">&#39;%Y-%d-%m&#39;</span>)</span>
 <span id="cb386-8"><a href="datumi.html#cb386-8" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="st">&#39;17. 10. 2015.&#39;</span>,  <span class="at">format =</span> <span class="st">&#39;%d. %m. %Y&#39;</span>)</span>
 <span id="cb386-9"><a href="datumi.html#cb386-9" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="st">&#39;01#01#2001&#39;</span>, <span class="at">format =</span> <span class="st">&#39;%d#%m#%Y&#39;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2022-12-07&quot;
+<pre><code>## [1] &quot;2022-12-14&quot;
 ## [1] &quot;1986-12-27&quot;
 ## [1] &quot;2016-05-31&quot;
 ## [1] &quot;2015-10-17&quot;
@@ -440,10 +452,10 @@ div.csl-indent {
 <span id="cb389-7"><a href="datumi.html#cb389-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb389-8"><a href="datumi.html#cb389-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite koliko je dana prošlo od 1.1.2000. do danas</span></span>
 <span id="cb389-9"><a href="datumi.html#cb389-9" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>() <span class="sc">-</span> <span class="fu">as.Date</span>(<span class="st">&#39;2000-01-01&#39;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2020-03-12&quot;
+<pre><code>## [1] &quot;2020-03-19&quot;
 ## [1] &quot;2015-03-01&quot;
 ## [1] &quot;2016-02-29&quot;
-## Time difference of 8376 days</code></pre>
+## Time difference of 8383 days</code></pre>
 </div>
 <hr />
 <p>Zadnji izraz će zapravo rezultirati objektom klase <code>difftime</code> koja označava vremenski interval. Ispis koristi tzv. “automatski” odabir jedinice (konkretno, parametar <code>units</code> postavljen na <code>"auto"</code>) koji će pokušati odabrati najprikladniju vremensku jedinicu za ispis. Ukoliko želimo eksplicitno odabrati koju vremensku jedinicu želimo (sekunde, minute, sate, dane ili tjedne) onda možemo umjesto operatora <code>-</code> koristiti funkciju <code>difftime</code> uz parametar <code>units</code> postavljen na znakovni niz odabrane vremenski jedinice (<code>"seconds"</code>, <code>"minutes"</code>, itd.).</p>
@@ -465,7 +477,7 @@ div.csl-indent {
 <span id="cb392-7"><a href="datumi.html#cb392-7" aria-hidden="true" tabindex="-1"></a><span class="co"># koliko je prošlo sati od 1.3.2015. do danas?</span></span>
 <span id="cb392-8"><a href="datumi.html#cb392-8" aria-hidden="true" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">Sys.Date</span>(), <span class="st">&#39;2015-03-01&#39;</span>, <span class="at">units =</span> <span class="st">&quot;hours&quot;</span>)</span></code></pre></div>
 <pre><code>## Time difference of 52.28571 weeks
-## Time difference of 68113 hours</code></pre>
+## Time difference of 68281 hours</code></pre>
 </div>
 <hr />
 <p>Funkcija <code>difftime</code> zapravo radi i sa vremenskim oznakama, tj. ne moramo nužno raditi na razini datuma, već se možemo spustiti do razine sekunde. Ovo ćemo isprobati kada naučimo klasu <code>POSIXct</code> u nastavku. Isto tako, ako nam treba samo broj (sekundi, sati, dana i sl.), lako transformiramo izlaz u cijeli broj uz pomoć funkcije <code>as.numeric</code>.</p>
@@ -522,16 +534,16 @@ div.csl-indent {
 ## [36] &quot;2027-07-01&quot; &quot;2028-01-01&quot; &quot;2028-07-01&quot; &quot;2029-01-01&quot; &quot;2029-07-01&quot;
 ## [41] &quot;2030-01-01&quot;
 ##    broj_stana prezime   ciscenje
-## 1           1   Ebert 2022-12-07
-## 2           2 Ladovac 2022-12-28
-## 3           3   Cerić 2023-01-18
-## 4           4   Dikla 2023-02-08
-## 5           5    Anić 2023-03-01
-## 6           6   Perić 2023-03-22
-## 7           7   Žužić 2023-04-12
-## 8           8   Babić 2023-05-03
-## 9           9    Ibiz 2023-05-24
-## 10         10  Radler 2023-06-14</code></pre>
+## 1           1   Ebert 2022-12-14
+## 2           2 Ladovac 2023-01-04
+## 3           3   Cerić 2023-01-25
+## 4           4   Dikla 2023-02-15
+## 5           5    Anić 2023-03-08
+## 6           6   Perić 2023-03-29
+## 7           7   Žužić 2023-04-19
+## 8           8   Babić 2023-05-10
+## 9           9    Ibiz 2023-05-31
+## 10         10  Radler 2023-06-21</code></pre>
 </div>
 <div class="fold s o">
 <div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb398-1"><a href="datumi.html#cb398-1" aria-hidden="true" tabindex="-1"></a><span class="co"># (teža varijanta)</span></span>
@@ -556,24 +568,24 @@ div.csl-indent {
 <pre><code>## # A tibble: 6 × 6
 ##   broj_stana datum_1    datum_2    datum_3    datum_4    datum_5   
 ##        &lt;int&gt; &lt;date&gt;     &lt;date&gt;     &lt;date&gt;     &lt;date&gt;     &lt;date&gt;    
-## 1          1 2022-12-07 2023-07-05 2024-01-31 2024-08-28 2025-03-26
-## 2          2 2022-12-28 2023-07-26 2024-02-21 2024-09-18 2025-04-16
-## 3          3 2023-01-18 2023-08-16 2024-03-13 2024-10-09 2025-05-07
-## 4          4 2023-02-08 2023-09-06 2024-04-03 2024-10-30 2025-05-28
-## 5          5 2023-03-01 2023-09-27 2024-04-24 2024-11-20 2025-06-18
-## 6          6 2023-03-22 2023-10-18 2024-05-15 2024-12-11 2025-07-09
+## 1          1 2022-12-14 2023-07-12 2024-02-07 2024-09-04 2025-04-02
+## 2          2 2023-01-04 2023-08-02 2024-02-28 2024-09-25 2025-04-23
+## 3          3 2023-01-25 2023-08-23 2024-03-20 2024-10-16 2025-05-14
+## 4          4 2023-02-15 2023-09-13 2024-04-10 2024-11-06 2025-06-04
+## 5          5 2023-03-08 2023-10-04 2024-05-01 2024-11-27 2025-06-25
+## 6          6 2023-03-29 2023-10-25 2024-05-22 2024-12-18 2025-07-16
 ## ------------------------
 ##    broj_stana prezime    datum_1    datum_2    datum_3    datum_4    datum_5
-## 1           1   Ebert 2022-12-07 2023-07-05 2024-01-31 2024-08-28 2025-03-26
-## 2           2 Ladovac 2022-12-28 2023-07-26 2024-02-21 2024-09-18 2025-04-16
-## 3           3   Cerić 2023-01-18 2023-08-16 2024-03-13 2024-10-09 2025-05-07
-## 4           4   Dikla 2023-02-08 2023-09-06 2024-04-03 2024-10-30 2025-05-28
-## 5           5    Anić 2023-03-01 2023-09-27 2024-04-24 2024-11-20 2025-06-18
-## 6           6   Perić 2023-03-22 2023-10-18 2024-05-15 2024-12-11 2025-07-09
-## 7           7   Žužić 2023-04-12 2023-11-08 2024-06-05 2025-01-01 2025-07-30
-## 8           8   Babić 2023-05-03 2023-11-29 2024-06-26 2025-01-22 2025-08-20
-## 9           9    Ibiz 2023-05-24 2023-12-20 2024-07-17 2025-02-12 2025-09-10
-## 10         10  Radler 2023-06-14 2024-01-10 2024-08-07 2025-03-05 2025-10-01</code></pre>
+## 1           1   Ebert 2022-12-14 2023-07-12 2024-02-07 2024-09-04 2025-04-02
+## 2           2 Ladovac 2023-01-04 2023-08-02 2024-02-28 2024-09-25 2025-04-23
+## 3           3   Cerić 2023-01-25 2023-08-23 2024-03-20 2024-10-16 2025-05-14
+## 4           4   Dikla 2023-02-15 2023-09-13 2024-04-10 2024-11-06 2025-06-04
+## 5           5    Anić 2023-03-08 2023-10-04 2024-05-01 2024-11-27 2025-06-25
+## 6           6   Perić 2023-03-29 2023-10-25 2024-05-22 2024-12-18 2025-07-16
+## 7           7   Žužić 2023-04-19 2023-11-15 2024-06-12 2025-01-08 2025-08-06
+## 8           8   Babić 2023-05-10 2023-12-06 2024-07-03 2025-01-29 2025-08-27
+## 9           9    Ibiz 2023-05-31 2023-12-27 2024-07-24 2025-02-19 2025-09-17
+## 10         10  Radler 2023-06-21 2024-01-17 2024-08-14 2025-03-12 2025-10-08</code></pre>
 </div>
 <hr />
 </div>
@@ -601,7 +613,7 @@ div.csl-indent {
 <span id="cb401-6"><a href="datumi.html#cb401-6" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;01-12-2001 14:30&quot;   &lt;-- oznaka očitana u New York-u, SAD, vremenska zona EST</span></span>
 <span id="cb401-7"><a href="datumi.html#cb401-7" aria-hidden="true" tabindex="-1"></a><span class="fu">as.POSIXct</span>(<span class="st">&quot;2015-10-28 15:30:42&quot;</span>)</span>
 <span id="cb401-8"><a href="datumi.html#cb401-8" aria-hidden="true" tabindex="-1"></a><span class="fu">as.POSIXct</span>(<span class="st">&quot;01-12-2001 14:30&quot;</span>, <span class="at">tz =</span> <span class="st">&quot;EST&quot;</span>, <span class="at">format =</span> <span class="st">&quot;%d-%m-%Y %H:%M&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2022-12-07 11:27:29 CET&quot;
+<pre><code>## [1] &quot;2022-12-14 10:34:06 CET&quot;
 ## [1] &quot;2015-10-28 15:30:42 CET&quot;
 ## [1] &quot;2001-12-01 14:30:00 EST&quot;</code></pre>
 </div>
@@ -637,8 +649,8 @@ div.csl-indent {
 <span id="cb407-3"><a href="datumi.html#cb407-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb407-4"><a href="datumi.html#cb407-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite koliko je prošlo sati od ponoći 1.1.2015. do sad</span></span>
 <span id="cb407-5"><a href="datumi.html#cb407-5" aria-hidden="true" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">Sys.time</span>(), <span class="st">&quot;2015-01-01 00:00:00&quot;</span>, <span class="at">units =</span> <span class="st">&quot;hours&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2022-12-07 11:44:09 CET&quot;
-## Time difference of 69539.46 hours</code></pre>
+<pre><code>## [1] &quot;2022-12-14 10:50:46 CET&quot;
+## Time difference of 69706.57 hours</code></pre>
 </div>
 <hr />
 <p>Klasa <code>POSIXlt</code> se ponaša isto kao i <code>POSIXct</code> (za stvaranje se koristimo funkcijom <code>as.POSIXlt</code>), no zapravo se radi o listi koja nam omogućuje jednostavno izvlačenje određenih parametara iz vremenske oznake, kao što su broj sekundi, broj minuta, dan u tjednu i sl. Sve elemente liste lako možemo vidjeti ako napravimo <code>POSIXlt</code> objekt i onda pozovemo funkciju <code>unclass</code> nad njim, pri čemu će se on pretvoriti u “običnu” listu. Možemo ići i korak dalje - ako listu ubacimo u funkciju <code>unlist</code>, kao rezultat dobivamo obični znakovni vektor.</p>
@@ -778,8 +790,8 @@ div.csl-indent {
 <span id="cb424-3"><a href="datumi.html#cb424-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb424-4"><a href="datumi.html#cb424-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite koliko je bilo sati, minuta i sekundi prije točno sat vremena</span></span>
 <span id="cb424-5"><a href="datumi.html#cb424-5" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>() <span class="sc">-</span> <span class="dv">60</span><span class="sc">*</span><span class="dv">60</span></span></code></pre></div>
-<pre><code>## [1] &quot;2022-12-08&quot;
-## [1] &quot;2022-12-07 10:27:30 CET&quot;</code></pre>
+<pre><code>## [1] &quot;2022-12-15&quot;
+## [1] &quot;2022-12-14 09:34:07 CET&quot;</code></pre>
 </div>
 <hr />
 <p>Već smo rekli da upravljanje vremenskom komponentom u podacima može postati vrlo kompleksno, pogotovo ako uzmemo u obzir da vremenski intervali mogu biti zadani generički (npr. “2 godine”) ili konkretno (raspon između dva datuma) te da se matematički i kalendarski način računanja vremena često ne poklapaju (npr. “za godinu dana” može značiti točan matematički izračun sekundi u 365 dana, ili kalendarski “isti datum iduće godine”).</p>
@@ -810,7 +822,7 @@ div.csl-indent {
 <span id="cb427-9"><a href="datumi.html#cb427-9" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>() <span class="sc">+</span> v</span></code></pre></div>
 <pre><code>## [1] &quot;1814400s (~3 weeks)&quot;
 ## [1] &quot;21d 0H 0M 0S&quot;
-## [1] &quot;2028-03-09&quot;</code></pre>
+## [1] &quot;2028-03-16&quot;</code></pre>
 </div>
 <hr />
 <p>Uočite da gornji izraz nismo lako mogli dobiti “matematički”.</p>
@@ -846,8 +858,8 @@ div.csl-indent {
 <span id="cb430-15"><a href="datumi.html#cb430-15" aria-hidden="true" tabindex="-1"></a>interval1</span>
 <span id="cb430-16"><a href="datumi.html#cb430-16" aria-hidden="true" tabindex="-1"></a>interval2</span>
 <span id="cb430-17"><a href="datumi.html#cb430-17" aria-hidden="true" tabindex="-1"></a>interval3</span></code></pre></div>
-<pre><code>## [1] 2022-06-07 UTC--2023-06-07 UTC
-## [1] 2022-12-07 UTC--2023-04-30 UTC
+<pre><code>## [1] 2022-06-14 UTC--2023-06-14 UTC
+## [1] 2022-12-14 UTC--2023-05-07 UTC
 ## [1] 2002-05-01 UTC--2002-07-01 UTC</code></pre>
 </div>
 <hr />
@@ -874,7 +886,7 @@ div.csl-indent {
 <span id="cb433-6"><a href="datumi.html#cb433-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ispišite njihov presjek</span></span>
 <span id="cb433-7"><a href="datumi.html#cb433-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">int_overlaps</span>(interval1, interval1)) <span class="fu">intersect</span>(interval1, interval2)</span></code></pre></div>
 <pre><code>## [1] TRUE
-## [1] 2022-12-07 UTC--2023-04-30 UTC</code></pre>
+## [1] 2022-12-14 UTC--2023-05-07 UTC</code></pre>
 </div>
 <hr />
 <p>U ovom dijelu upoznali smo se sa jednim dijelom funkcionalnosti koje nude klase za upravljanje datumima i vremenskim oznakama jezika R te paket <code>lubridate</code>. Za dodatne informacije pogledajte službenu dokumentaciju jezika R i paketa <code>lubridate</code>, a dobar izvor je i članak <em>“Dates and Times Made Easy with lubridate”</em> kojeg je napisao sam autor paketa Hadley Wickham a koji je dostupan na <a href = "https://www.jstatsoft.org/article/view/v040i03/v40i03.pdf">ovoj poveznici</a>.</p>
@@ -1207,11 +1219,6 @@ div.csl-indent {
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Programirajmo u R-u</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.fer.unizg.hr/en/damir.pintar" property="cc:attributionName" rel="cc:attributionURL">Damir Pintar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://ratnip.github.io/FER_OPJR/" rel="dct:source">https://ratnip.github.io/FER_OPJR/</a></p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Bache, Stefan Milton, and Hadley Wickham. 2014. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
-</div>
-</div>
 </div>
 </div>
             </section>
@@ -1219,8 +1226,8 @@ Bache, Stefan Milton, and Hadley Wickham. 2014. <em>Magrittr: A Forward-Pipe Ope
           </div>
         </div>
       </div>
-<a href="cijev.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="cijev.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
