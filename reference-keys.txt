@@ -88,3 +88,17 @@ ogledni-podatkovni-skup-houston-flights
 grupiranje-i-agregacija-uz-group_by-i-summarise
 spajanje-podatkovnih-okvira-uz-join-funkcije
 integracija-sa-relacijskim-bazama-podataka
+ggplot2
+eksploratorna-analiza-podataka
+vizualizacija-podataka-uz-pomoć-jezika-r
+grafička-gramatika-i-paket-ggplot2
+aspekti-podataka-estetike-i-geometrije
+prvi-ggplot2-graf
+funkcija-labs
+fiksni-parametri-geometrije
+aspekti-statistike-i-pozicije
+povezanost-geometrije-i-statistike
+spremanje-slike-u-datoteku
+aspekti-skale-koordinatnog-sustava-i-teme
+uvjetni-facetirani-grafovi
+grafovi-u-eksploratornoj-analizi-i-izvještavanju
